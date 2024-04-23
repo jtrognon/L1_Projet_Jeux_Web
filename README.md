@@ -36,10 +36,24 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
     - Déconnexion
     - changement username
     - changement mot de passe
-    - Progression
+    - Affichage progression
     - Ecraser progression
 - Page admin
+    - Suppression
+    - Ajout
+    - Modification
+    - Affichage de tout les dialogues de toutes les histoires
 - Page d’histoire
+    - barre de navigation
+        - sauvegarde
+        - profil
+        - retour au menu
+        - aide (optionnel si on a le temps)
+    - fenetre principale
+        - affichage des 3 dialogues précédents
+        - le choix des dialogues
+        - image des personnages
+        - image de fond
 
 ## Logique du site
 - Gestion du choix de l’utilisateur
