@@ -26,8 +26,18 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
 
 ## Visuel
 - Page de connexion (connexion et inscription)
+    - page de connexion
+    - page d'inscription
 - Page de menu
+    - lien vers profil
+    - choix des histoires
+    - lien vers admin
 - Page de profil
+    - Déconnexion
+    - changement username
+    - changement mot de passe
+    - Progression
+    - Ecraser progression
 - Page admin
 - Page d’histoire
 
