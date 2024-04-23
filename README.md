@@ -26,26 +26,26 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
 
 # Tâches : 
 
-## Visuel
-- Page de connexion (connexion et inscription)
+## Visuel (Teva & Chloé & Julie)
+- Page de connexion (connexion et inscription) **(Teva)**
     - page de connexion
     - page d'inscription
-- Page de menu
+- Page de menu **(Teva)**
     - lien vers profil
     - choix des histoires
     - lien vers admin
-- Page de profil
+- Page de profil **(Chloé)**
     - Déconnexion
     - changement username
     - changement mot de passe
     - Affichage progression
     - Ecraser progression
-- Page admin
+- Page admin **(Julie)**
     - Suppression
     - Ajout
     - Modification
     - Affichage de tout les dialogues de toutes les histoires
-- Page d’histoire
+- Page d’histoire **(Teva)**
     - barre de navigation
         - sauvegarde
         - profil
@@ -58,7 +58,7 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
         - image de fond
         - affichage du lancé de dés
 
-## Logique du site
+## Logique du site (Julie)
 - Gestion du choix de l’utilisateur
 - Sauvegarde (dans fichier json)
 - Connexion, inscription et déconnexion
@@ -67,7 +67,7 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
     - Déconnexion
 - Lancé de dés
 
-## CRUD
+## CRUD (Chloé)
 - CRUD  des histoires, dialogues et utilisateurs.
     - Dialogue
         - id
@@ -88,3 +88,20 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
         - url_image
         - nom
         - couleur
+
+
+
+
+# Structure fichiers
+
+- **vue**
+    - **images**
+    - **css**
+    - *truc_vue.js*
+
+
+- **CRUD**
+    - *truc_crud.php*
+
+- **lib**
+    - *truc_lib.js*
