@@ -94,14 +94,14 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
 
 # Structure fichiers
 
-- **vue**
-    - **images**
-    - **css**
+- <u>vue</u>
+    - <u>images</u>
+    - <u>css</u>
     - *truc_vue.js*
 
 
-- **CRUD**
+- <u>CRUD</u>
     - *truc_crud.php*
 
-- **lib**
+- <u>lib</u>
     - *truc_lib.js*
