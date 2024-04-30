@@ -61,6 +61,23 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
 ## Logique du site (Julie)
 - Gestion du choix de l’utilisateur
 - Sauvegarde (dans fichier json)
+    - {
+        [
+        - id_histoire : [
+
+            id_dialogue_1,
+            
+            id_dialogue_2,
+            
+            ...
+            
+            id_dernier dialogue
+
+            ],
+
+        ],
+    
+    }
 - Connexion, inscription et déconnexion
     - Connexion
     - Inscription
@@ -79,10 +96,6 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
     - Histoire 
         - id
         - nom
-        - id_pointeur
-    - Pointeur
-        - id
-        - id_dialogue (donne le dialogue en cours dans l'histoire)
     - Personnage
         - id
         - url_image
@@ -99,6 +112,9 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
     - **css**
     - *truc_vue.js*
 
+- **db**
+    - db_connect.php
+    - db_disconnect.php
 
 - **CRUD**
     - *truc_crud.php*
