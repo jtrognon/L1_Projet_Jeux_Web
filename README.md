@@ -89,6 +89,7 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
     - Dialogue
         - id
         - id_histoire
+        - id personnage
         - texte
         - id_suite_dialogue_1 (celui qui vient après)
         - id_suite_dialogue_2 (potentiellement vide)
