@@ -108,11 +108,10 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
         - id
         - login
         - passwd
-      
-      
-
-
-
+    - Progression
+        - id (Auto-Increment)
+        - id_histoire
+        - id_dialogue
 
 # Structure fichiers
 
