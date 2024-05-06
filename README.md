@@ -28,7 +28,7 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
 
 # Tâches : 
 
-## Visuel (Teva & Chloé & Julie)
+## Visuel (Teva & Rania & Julie)
 - Page de connexion (connexion et inscription) **(Teva)**
     - page de connexion
     - page d'inscription
