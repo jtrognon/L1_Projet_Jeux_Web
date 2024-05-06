@@ -104,7 +104,7 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
         - url_image
         - nom
         - couleur
-- Connexion
+    - Connexion
         - id
         - login
         - passwd
