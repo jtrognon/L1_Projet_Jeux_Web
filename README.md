@@ -96,6 +96,7 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
         - id_suite_dialogue_2 (potentiellement vide)
         - id_suite_dialogue_3
         - dés (boolean pour savoir si ce dialogue utilise un lancé de dés)
+        - premier_dialogue (0 ou 1 poru le premier dialogue de l'histoire)
     - Histoire 
         - id
         - nom
