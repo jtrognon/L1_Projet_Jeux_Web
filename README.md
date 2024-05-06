@@ -86,7 +86,7 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
 - Lancé de dés
 
 ## CRUD (Chloé)
-- CRUD  des histoires, dialogues et utilisateurs.
+- CRUD  des histoires, dialogues et utilisateurs. Supp, ajout, odif, select)
     - Dialogue
         - id
         - id_histoire
