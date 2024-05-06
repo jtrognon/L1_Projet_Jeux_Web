@@ -30,11 +30,11 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
 - Page de connexion (connexion et inscription) **(Teva)**
     - page de connexion
     - page d'inscription
-- Page de menu **(Teva)**
+- Page de menu **(Rania)**
     - lien vers profil
     - choix des histoires
     - lien vers admin
-- Page de profil **(Chloé)**
+- Page de profil **(Rania)**
     - Déconnexion
     - changement username
     - changement mot de passe
@@ -47,7 +47,6 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
     - Affichage de tout les dialogues de toutes les histoires
 - Page d’histoire **(Teva)**
     - barre de navigation
-        - sauvegarde
         - profil
         - retour au menu
         - aide (optionnel si on a le temps)
@@ -58,7 +57,7 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
         - image de fond
         - affichage du lancé de dés
 
-## Logique du site (Julie)
+## Logique du site (Teva et Julie)
 - Gestion du choix de l’utilisateur
 - Sauvegarde (dans fichier json)
     - {
@@ -78,7 +77,7 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
         ],
     
     }
-- Connexion, inscription et déconnexion
+- Connexion, inscription et déconnexion (Teva)
     - Connexion
     - Inscription
     - Déconnexion
