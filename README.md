@@ -1,6 +1,6 @@
 PHILIPPE Teva
 
-FAUCON Chloé
+FAUCON Chloé :)
 
 TROGNON Julie
 
