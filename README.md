@@ -113,6 +113,7 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
         - id (Auto-Increment)
         - id_histoire
         - id_dialogue
+        - id_progression_precedent
 
 # Structure fichiers
 
