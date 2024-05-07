@@ -1,5 +1,5 @@
 <?php
 // 1 - Connexion a la base
-$conn = mysqli_connect("localhost", "trognon", "ye9lu0Eu", "db_trognon");
+$conn = mysqli_connect("localhost", "grp1", "hoh0wohT", "db_grp1");
 mysqli_set_charset($conn, "utf8");
 ?>

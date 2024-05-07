@@ -5,20 +5,13 @@
     <title>TEST Julie</title>
 
     <!-- Inports des scripts nécessaire au tests -->
-    <script src="lib/save/save_lib.js"></script>
+    <script src="admin_fct_vue.js"></script>
 </head>
 
-<script>
-    // Tests :
 
-    // Lecture du fichier de save du user_id = 1 : 
-    save_init(1);
-
-</script>
-
-<body>
+<body onload="create_story_form_vue();">
     <h1>Page de <strong>TEST</strong> de Julie</h1>
 
-    
+    <section id="story"></section>
 </body>
 </html>
