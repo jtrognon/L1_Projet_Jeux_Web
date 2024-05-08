@@ -12,3 +12,19 @@
     width: 300px;
     height: 150px;
   }
+
+
+
+
+
+
+/*
+-------------- Admin --------------
+*/
+
+#list li{
+    display: flex;
+    background-color: brown;
+
+    justify-content: space-between;
+}

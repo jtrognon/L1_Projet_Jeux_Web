@@ -1,4 +1,14 @@
 
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// ----------------------- /!\ Formulaires /!\ --------------------
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+
+
+
 // -----------------------------------------------------------------------
 // -----------------------------------------------------------------------
 // Fonction appelé par la page pour créer les forms avec des champs précis
@@ -150,3 +160,89 @@ function create_input(name, type, value){
 
     return input;
 }
+
+
+
+
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// ----------------------- /!\ Affichages /!\ ---------------------
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+
+
+// Histoires
+
+function display_stories_vue(stories){
+    // stories étant un tableau de dictionnaires
+    
+    let section = document.querySelector("#list");
+    
+    let ul = document.createElement("ul"); // liste principale
+    section.appendChild(ul);
+
+
+    for (let i=0; i < stories.length; i++){
+        let story = stories[i];
+        
+        // Infos à afficher
+        let id = story["id"];
+        let name = story["nom"];
+        let infos = [id, name];
+
+        // Lien pour remplir le formulaire
+        let link = "story_id=" + id;
+
+        // création du dropdown
+        let li = create_dropdown(infos, link);
+        ul.appendChild(li);
+    }
+}
+
+
+function create_dropdown(infos, link, expand=true){
+    let li = document.createElement("li");
+
+    if (expand){ // == Peut se dérouler
+        let expand_button = create_expand_button();
+        li.appendChild(expand_button);
+    }
+
+    for (let i=0; i < infos.length; i++){ // Affiche les infos dans le li
+        let p = document.createElement("p");
+        p.innerHTML = infos[i];
+
+        li.appendChild(p);
+    }
+
+    // Permet de donner les infos utiles pour le formulaire de modification
+    let a = document.createElement("a"); 
+    li.appendChild(a);
+
+    a.href = "admin_vue.php?" + link;
+    a.innerHTML = "Modifier";
+
+    return li;
+}
+
+
+function create_expand_button(){
+    let button = document.createElement("button");
+    button.type = "button";
+    button.onclick = expand;
+    button.innerHTML = "Dérouler";
+    
+    return button;
+}
+
+
+function expand(){
+    // todo
+}
+
+
+
+
+// Personnages
