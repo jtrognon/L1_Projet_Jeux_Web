@@ -114,6 +114,7 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
         - id_histoire
         - id_dialogue
         - id_progression_precedent
+        - id_user
 
 # Structure fichiers
 
