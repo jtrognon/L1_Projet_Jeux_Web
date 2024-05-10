@@ -59,9 +59,9 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
         - image de fond
         - affichage du lancé de dés
 
-## Logique du site (Teva et Julie)
-- Gestion du choix de l’utilisateur
-- Sauvegarde (dans fichier json)
+## Logique du site (Teva & Chloé & Julie)
+- Gestion du choix de l’utilisateur (julie)
+- Sauvegarde (dans fichier json) (Julie
     - {
         [
         - id_histoire : [
@@ -83,7 +83,9 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
     - Connexion
     - Inscription
     - Déconnexion
-- Lancé de dés
+- Lancé de dés (Julie)
+- page_admin (Chloé)
+- page_histoire (Chloé)
 
 ## CRUD (Chloé)
 - CRUD  des histoires, dialogues et utilisateurs. Supp, ajout, odif, select)
@@ -97,6 +99,7 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
         - id_suite_dialogue_3
         - dés (boolean pour savoir si ce dialogue utilise un lancé de dés)
         - premier_dialogue (0 ou 1 pour le premier dialogue de l'histoire)
+        - id_dialogue_necessaire
     - Histoire 
         - id
         - nom
