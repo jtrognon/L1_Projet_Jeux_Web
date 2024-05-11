@@ -60,14 +60,14 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
         - affichage du lancé de dés
 
 ## Logique du site (Teva & Chloé & Julie)
-- Gestion du choix de l’utilisateur (julie)
+- Gestion du choix de l’utilisateur (Chloé)
 - Progression et choix possible (Julie)
 - Connexion, inscription et déconnexion (Teva)
     - Connexion
     - Inscription
     - Déconnexion
-- Lancé de dés (Julie)
-- page_admin (Chloé)
+- Lancé de dés (Chloé)
+- page_admin (Julie)
 - page_histoire (Chloé)
 
 ## CRUD (Chloé)
