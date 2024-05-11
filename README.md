@@ -61,24 +61,7 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
 
 ## Logique du site (Teva & Chloé & Julie)
 - Gestion du choix de l’utilisateur (julie)
-- Sauvegarde (dans fichier json) (Julie
-    - {
-        [
-        - id_histoire : [
-
-            id_dialogue_1,
-            
-            id_dialogue_2,
-            
-            ...
-            
-            id_dernier dialogue
-
-            ],
-
-        ],
-    
-    }
+- Progression et choix possible (Julie)
 - Connexion, inscription et déconnexion (Teva)
     - Connexion
     - Inscription
