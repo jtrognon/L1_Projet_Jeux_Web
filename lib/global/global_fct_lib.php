@@ -1,9 +1,12 @@
 <?php
-
-function is_connected(){
+function is_connected($conn, $redirection){
     // Check dans session si connecté
-
-    echo true;
+    if (!isset($_SESSION["id_user"])){
+        
+        if ($redirection){
+            header("Location: /~grp1/vue/menu_connexion_vue.php");
+         }
+    }
 }
 
 
@@ -15,3 +18,4 @@ function is_admin(){
 }
 
 ?>
+
