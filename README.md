@@ -59,31 +59,16 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
         - image de fond
         - affichage du lancé de dés
 
-## Logique du site (Teva et Julie)
-- Gestion du choix de l’utilisateur
-- Sauvegarde (dans fichier json)
-    - {
-        [
-        - id_histoire : [
-
-            id_dialogue_1,
-            
-            id_dialogue_2,
-            
-            ...
-            
-            id_dernier dialogue
-
-            ],
-
-        ],
-    
-    }
+## Logique du site (Teva & Chloé & Julie)
+- Gestion du choix de l’utilisateur (Chloé)
+- Progression et choix possible (Julie)
 - Connexion, inscription et déconnexion (Teva)
     - Connexion
     - Inscription
     - Déconnexion
-- Lancé de dés
+- Lancé de dés (Chloé)
+- page_admin (Julie)
+- page_histoire (Chloé)
 
 ## CRUD (Chloé)
 - CRUD  des histoires, dialogues et utilisateurs. Supp, ajout, odif, select)
@@ -97,6 +82,7 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
         - id_suite_dialogue_3
         - dés (boolean pour savoir si ce dialogue utilise un lancé de dés)
         - premier_dialogue (0 ou 1 pour le premier dialogue de l'histoire)
+        - id_dialogue_necessaire
     - Histoire 
         - id
         - nom
@@ -109,11 +95,13 @@ Le contenu principal de la page sera l’hsitoire en elle-même, avec les choix 
         - id
         - login
         - passwd
+        - admin (bool)
     - Progression
         - id (Auto-Increment)
         - id_histoire
         - id_dialogue
         - id_progression_precedent
+        - id_user
 
 # Structure fichiers
 
