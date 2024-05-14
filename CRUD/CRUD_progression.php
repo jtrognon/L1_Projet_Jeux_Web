@@ -1,8 +1,6 @@
 <?php
 
-$debeug=false ; 
-include('../db/db_connect.php');
-
+$debeug=False ; 
 $result = mysqli_query($conn , "select * from progression");
 
 /*---------------------------------------
@@ -15,32 +13,32 @@ function liste_progression($conn){
 	global $debeug ;
 	if($debeug) echo $sql ; 
 	$res=mysqli_query($conn, $sql) ; 
-	return rs_to_tab($res) ;
+	return rs_to_tab_progression($res) ;
 }
 
 /*Selectionner par id*/ 
 function select_progression_id($conn, $id){
-	$sql="SELECT * FROM `progression` WHERE `id`=$id ";
+	$sql="SELECT * FROM `progression` WHERE `id`='$id' ";
 	global $debeug ;
 	if($debeug) echo $sql ; 
 	$res=mysqli_query($conn, $sql) ; 
-	$tab=rs_to_tab($res) ;
-	return $tab[0] ;
+	$tab=rs_to_tab_progression($res) ;
+	return $tab ;
 }
 
 /*Selectionner par id dialogue et user*/ 
 function select_progression_dialogue_user($conn, $id_dialogue,$id_user){
-	$sql="SELECT * FROM `progression` WHERE `id_user`=$id_user AND `id_dialogue`=$id_dialogue ";
+	$sql="SELECT * FROM `progression` WHERE `id_user`='$id_user' AND `id_dialogue`='$id_dialogue' ";
 	global $debeug ;
 	if($debeug) echo $sql ; 
 	$res=mysqli_query($conn, $sql) ; 
-	$tab=rs_to_tab($res) ;
-	return $tab[0] ;
+	$tab=rs_to_tab_progression($res) ;
+	return $tab ;
 }
 
 
 
-function rs_to_tab($rs){
+function rs_to_tab_progression($rs){
 	$tab=[] ; 
 	while($row=mysqli_fetch_assoc($rs)){
 		$tab[]=$row ;	

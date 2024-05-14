@@ -1,7 +1,21 @@
 <?php
-session_start() ;
-include("db/db_connect.php");
-include("../lib/connexion_lib.php");
+$redirection = false;
+session_start();
+include("../db/db_connect.php");
+include("../lib/global/header.php");
+
+if(isset($_POST["login"])){
+	$mdp = mdp_connexion($conn, $_POST["login"]); // select_mdp à faire
+	if($_POST["passwd"]!= null
+	&& $_POST["passwd"]==$mdp){
+		
+		/* session admin */
+		$id = id_connexion($conn, $_POST["login"]); //requete
+		$_SESSION["id_user"]=$id; # à conditionner
+		print($_SESSION["id_user"]);
+		header("Location: /~grp1/vue/menu_vue.php"); 
+	}
+}
 
 ?>
 <html>
@@ -16,7 +30,7 @@ include("../lib/connexion_lib.php");
 		<input type="submit">
 	</form>
 
-	<h1> Lien vers page de Rania </h1>
+	<a href="menu_connexion_vue.php" >Retour</a> </br>
 
 	</body>
 </html>

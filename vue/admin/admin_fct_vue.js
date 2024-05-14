@@ -120,7 +120,7 @@ function update_dialogue_form_vue(tr_values){
     // Noms des champs
     let tr_names = ["id", "id_histoire", "id_personnage", "texte", "id_suite_dialogue_1", "id_suite_dialogue_2", "id_suite_dialogue_3", "dés", "premier_dialogue", "id_dialogue_necessaire", "action", "table", ""];
     let tr_display_names = ["id", "Identifiant de l'histoire : ", "Identifiant du personnage : ", "Texte de dialogue : ", "ID du prochain dialogue (1) : ", "ID du prochain dialogue (2) : ", "ID du prochain dialogue (3) : ", "Nécessite un dés : ", "Premier dialogue : ", "ID du dialogue nécessaire : ", "", "", ""];
-    let tr_types = ["text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "hidden", "hidden", "submit"];
+    let tr_types = ["text", "text", "text", "text", "text", "text", "text", "checkbox", "checkbox", "text", "hidden", "hidden", "submit"];
     tr_values = tr_values.concat(["update", "dialogue", "Modifier"]);
 
     create_form_vue(section, tr_display_names, tr_names, tr_types, tr_values);
@@ -195,7 +195,7 @@ function display_dialogues_vue(id_histoire){
         let premier_dialogue = dialogue["premier_dialogue"];
 
         let infos = [id, texte, premier_dialogue];
-        let link = "id_dialogue" + id;
+        let link = "id_dialogue=" + id;
 
         let li = create_dropdown(infos, id, "dialogue", link, id_histoire);
         ul.appendChild(li);
@@ -219,7 +219,7 @@ function display_personnage_vue(id_histoire, id_dialogue){
     let url = personnage["url_image"];
 
     let infos = [id, nom, url];
-    let link = "id_personnage" + id;
+    let link = "id_personnage=" + id;
 
     let li = create_dropdown(infos, id, "personnage", link, id_histoire, false); // false permet de ne pas afficher un bouton pour dérouler
     ul.appendChild(li);

@@ -33,4 +33,13 @@ function load_histoires($conn){
 }
 
 
+function dict_to_list($dict) {
+    $list = [];
+    foreach ($dict as $value){
+        $list[] = $value;
+    }
+
+    return $list;
+}
+
 ?>

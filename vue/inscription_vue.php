@@ -1,8 +1,8 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
-include("../db/db_connect.php");
-include("../CRUD/CRUD_connexion.php")
+$redirection = false;
+session_start();
+include("../lib/global/header.php");
+
 
 ?>
 <html>
@@ -13,7 +13,7 @@ include("../CRUD/CRUD_connexion.php")
 	<body>
 	
 
-		<form method="post" action="menu_connexion_vue.php">
+		<form method="POST" action="menu_connexion_vue.php">
 		<table class='table_2'>
 			<tr >
 				<td> <h2> Inscription </h2> </td>
@@ -39,10 +39,3 @@ include("../CRUD/CRUD_connexion.php")
 	</body>
 
 </html>
-
-<?php
-
-if (isset($_POST["login"]) && isset($_POST["mdp"])){
-	ajout_utilisateur($conn,$_POST["login"],$_POST["mdp"]);
-}	
-?>

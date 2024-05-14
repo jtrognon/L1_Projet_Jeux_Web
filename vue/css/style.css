@@ -4,6 +4,11 @@
     letter-spacing: 1px;
 }
 
+.onglet_histoire{
+    border: 5px solid rgb(131, 248, 88);
+    background-color: rgb(154, 28, 28);
+}
+
 .box {
     border: 5px solid rebeccapurple;
     background-color: lightgray;
@@ -18,13 +23,3 @@
 
 
 
-/*
--------------- Admin --------------
-*/
-
-#list li{
-    display: flex;
-    background-color: brown;
-
-    justify-content: space-between;
-}

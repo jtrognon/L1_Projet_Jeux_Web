@@ -16,7 +16,8 @@ include("../CRUD/CRUD_dialogue.php");
     <script>
         // Temporaire
         function body_onload(){
-            
+            let choices = [{"text" : "Je suis le choix 1", "id": 2}, {"text" : "choix 2", "id": 3}];
+            add_choices(choices);
         }
     </script>
 </head>

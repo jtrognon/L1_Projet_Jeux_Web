@@ -1,6 +1,6 @@
 <?php
-
-include("../../lib/global/header.php");
+session_start();
+include("../../lib/global/header_admin.php");
 
 ?>
 
@@ -12,7 +12,6 @@ include("/home/grp1/public_html/CRUD/CRUD_personnage.php");
 include("/home/grp1/public_html/CRUD/CRUD_progression.php");
 
 include("admin_fct.php");
-
 ?>
 
 <!DOCTYPE html>
@@ -20,8 +19,8 @@ include("admin_fct.php");
 <head>
     <meta charset="UTF-8">
     <title>Admin</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../form_vue.js"></script>
+    <link rel="stylesheet" href="../css/style_temp_julie.css">
+    <script src="form_vue.js"></script>
     <script src="admin_fct_vue.js"></script>
 </head>
 
@@ -40,20 +39,20 @@ include("admin_fct.php");
     function body_onload(){
         // histoire
         create_histoire_form_vue(); 
-        update_histoire_form_vue(["", ""]);
-        delete_histoire_form_vue([""]);
+        update_histoire_form_vue(histoire_infos);
+        delete_histoire_form_vue(id_histoire);
 
     
         // personnage
         create_personnage_form_vue();
-        update_personnage_form_vue(["", "", "", ""]);
-        delete_personnage_form_vue([""]);
+        update_personnage_form_vue(personnage_infos);
+        delete_personnage_form_vue(id_personnage);
 
 
         // Dialogue
         create_dialogue_form_vue();
-        update_dialogue_form_vue(["", "", "", "", "", "", 0, 0, "", ""]);
-        delete_dialogue_form_vue([""]);
+        update_dialogue_form_vue(dialogue_infos);
+        delete_dialogue_form_vue(id_dialogue);
 
 
         // Display 

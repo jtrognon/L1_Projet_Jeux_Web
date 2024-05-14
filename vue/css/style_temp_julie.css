@@ -1,0 +1,12 @@
+/*
+-------------- Admin --------------
+*/
+
+#list li{
+    display: flex;
+    background-color: brown;
+    width: 90vw;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+}

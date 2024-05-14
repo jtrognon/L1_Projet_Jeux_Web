@@ -14,7 +14,7 @@ function create_form_vue(section, tr_display_names, tr_names, tr_types, tr_value
     form.target = "admin_vue.php";
     
 
-    // Affichage en forme de tableau
+    // Affichage en forme de tableaconst [id, histoire] of Object.entries(histoires)u
 
     let table = document.createElement("table");
     form.appendChild(table);
@@ -59,14 +59,11 @@ function create_input(name, type, value){
     // Paramètre de l'entrée
     input.type = type;
     input.name = name;
-
-    if (type == "checkbox"){
-        input.onclick = function () {
-            this.value = this.value + 1 % 2;
-        };
-    }
-
     input.value = value;
+
+    if (type == "checkbox" && value == "1"){
+        input.checked = true;
+    }
 
     return input;
 }

@@ -1,8 +1,6 @@
 <?php
 
-$debeug=false ; 
-include('../db/db_connect.php');
-
+$debeug=False ; 
 
 $result = mysqli_query($conn , "select * from Personnage");
 
@@ -23,7 +21,7 @@ function create_perso($conn, $url_image, $nom, $couleur){
 
 /* Suprimer un personnage*/
 function delete_perso($conn, $id){
-	$sql="DELETE FROM `Personnage` WHERE `id`=$id" ;
+	$sql="DELETE FROM `Personnage` WHERE `id`='$id'" ;
 	$ret=mysqli_query($conn, $sql) ;
 	return $ret ; 
 }
@@ -39,12 +37,12 @@ function update_perso($conn, $id,$url_image, $nom, $couleur){
 
 /*Selectionner un personnage*/ 
 function select_perso($conn, $id){
-	$sql="SELECT * FROM `Personnage` WHERE `id`=$id " ; 
+	$sql="SELECT * FROM `Personnage` WHERE `id`='$id' " ; 
 	global $debeug ;
 	if($debeug) echo $sql ; 
 	$res=mysqli_query($conn, $sql) ; 
-	$tab=rs_to_tab($res) ;
-	return $tab[0] ;
+	$tab=rs_to_tab_personnage($res) ;
+	return $tab ;
 }
 
 /*Liste de tous les personnages*/ 
@@ -53,10 +51,10 @@ function list_perso($conn){
 	global $debeug ;
 	if($debeug) echo $sql ; 
 	$res=mysqli_query($conn, $sql) ; 
-	return rs_to_tab($res) ;
+	return rs_to_tab_personnage($res) ;
 }
 
-function rs_to_tab($rs){
+function rs_to_tab_personnage($rs){
 	$tab=[] ; 
 	while($row=mysqli_fetch_assoc($rs)){
 		$tab[]=$row ;	

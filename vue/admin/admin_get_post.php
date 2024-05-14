@@ -1,13 +1,55 @@
 <?php
-
-// Dérouler les dialogues
+// ---------------------------
+// Auto remplissage des champs
+// ---------------------------
 if (isset($_GET["id_histoire"])){
     $id_histoire = $_GET["id_histoire"];
-    echo "let id_histoire = $id_histoire;";
+    
+    $histoire_infos = select_histoire($conn, $id_histoire)[0];
+    $histoire_list = dict_to_list($histoire_infos);
+    $histoire_str = json_encode($histoire_list);
+
+    echo "let histoire_infos = $histoire_str;";
+    echo "let id_histoire = ['$id_histoire'];";
 } else {
-    echo "let id_histoire = 0;";
+    echo "let histoire_infos = ['', ''];";
+    echo "let id_histoire = [''];";
 }
 
+
+if (isset($_GET["id_dialogue"])){
+    $id_dialogue = $_GET["id_dialogue"];
+    
+    $dialogue_infos = select_dialogue($conn, $id_dialogue)[0];
+    $dialogue_list = dict_to_list($dialogue_infos);
+    $dialogue_str = json_encode($dialogue_list);
+
+    echo "let dialogue_infos = $dialogue_str;";
+    echo "let id_dialogue = ['$id_dialogue'];";
+} else {
+    echo "let dialogue_infos = ['', '', '', '', '', '', '', '', '', ''];";
+    echo "let id_dialogue = [''];";
+}
+
+
+if (isset($_GET["id_personnage"])){
+    $id_personnage = $_GET["id_personnage"];
+    
+    $personnage_infos = select_personnage($conn, $id_personnage);
+    $personnage_list = dict_to_list($personnage_infos);
+    $personnage_str = json_encode($personnage_list);
+
+    echo "let personnage_infos = $personnage_str;";
+    echo "let id_personnage = ['$id_personnage'];";
+} else {
+    echo "let personnage_infos = ['', '', '', ''];";
+    echo "let id_personnage = [''];";
+}
+
+
+// ----------------------------------
+// Gestion des envoies des formulaire
+// ----------------------------------
 
 if (isset($_POST["action"]) && isset($_POST["table"])){
     // Infos du formulaire

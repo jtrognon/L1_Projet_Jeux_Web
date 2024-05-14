@@ -2,7 +2,7 @@
 
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-$debeug=false ; 
+$debeug=True ; 
 include('../db/db_connect.php');
 
 /*---------------------------------------
@@ -55,8 +55,6 @@ function liste_histoire($conn){
 	return rs_to_tab($res) ;
 }
 
-/*JUSQU ICI IMPORTANT POUR ETAPE 1*/
-
 /*---------------------------------------
 CRUD: Connexion
 ---------------------------------------*/
@@ -64,11 +62,11 @@ CRUD: Connexion
 
 
 function mdp_connexion($conn,$login){
-	$sql="SELECT passwd FROM `connexion` WHERE login= '$login'";
+	$sql="SELECT passwd FROM `connexion` WHERE login= $login";
 
 	$res=mysqli_query($conn, $sql) ;
 	$passwd = mysqli_fetch_assoc($res);
-	if ($passwd == false){
+	if $passwd == false{
 		return null;
 	}
 	return $passwd['passwd'];
