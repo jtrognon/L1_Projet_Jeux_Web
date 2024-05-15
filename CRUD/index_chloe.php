@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <?php
-        include('../db/db_connect.php');
-        include('CRUD_connexion.php');
+    error_reporting(E_ALL);
+    ini_set('display_errors', '1');
+    include('../db/db_connect.php');
+    include('../lib/fonction_histoire.php');
 ?>
 
 
@@ -12,23 +14,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Ajouter un perso :</h2>
+    <h2>Nouveau nom:</h2>
     <br>
     <form method="post" action="index_chloe.php">
         <table>
                 <tr>
-                <th><strong>login</strong></th>
-                <td><input type="text" name="login"></td>
-                </tr>
-
-
+                <th><strong>id</strong></th>
+                <td><input type="text" name="id"></td>
         </table>
         <input type="submit" value="Envoyer">
+    </form>
     <?php
-        if(isset($_POST["login"])){
-            $login = $_POST["login"];
+        if(isset($_POST["id"])){
+            $id = $_POST["id"]; 
         }
-        echo(admin_connexion($conn,$login));
+        print_r(return_dialogue_suivant($conn,$id));
     ?>
 </body>
 </html>

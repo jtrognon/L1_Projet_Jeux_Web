@@ -11,8 +11,9 @@ if(isset($_POST["login"])){
 		
 		/* session admin */
 		$id = id_connexion($conn, $_POST["login"]); //requete
-		$_SESSION["id_user"]=$id; # à conditionner
-		print($_SESSION["id_user"]);
+		$admi = admin_connexion($conn,$_POST["login"]);
+		$_SESSION["id_user"] = $id;
+		$_SESSION["admin"] = $admi ;
 		header("Location: /~grp1/vue/menu_vue.php"); 
 	}
 }

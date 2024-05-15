@@ -45,4 +45,37 @@ function rs_to_tab_progression($rs){
 	}
 	return $tab;
 }
+
+/*Selectionne l'id et id dialogue precedent en fonction de l'user*/ 
+function select_ids_progression($conn,$user_id){
+	$sql="SELECT `id`,`id_progression_precedent` FROM `progression` WHERE `id_user`='$user_id' ";
+	global $debeug ;
+	if($debeug) echo $sql ; 
+	$res=mysqli_query($conn, $sql) ; 
+	$tab=rs_to_tab_progression($res) ;
+	return $tab ;
+}
+
+/*Selection du dialogue précédent*/ 
+function select_dialogue_precedent($conn, $id){
+	$sql="SELECT `id_progression_precedent` FROM `progression` WHERE `id`='$id' ";
+	global $debeug ;
+	if($debeug) echo $sql ; 
+	$res=mysqli_query($conn, $sql) ; 
+	$tab=rs_to_tab_progression($res) ;
+	return $tab ;
+}
+
+/*Selection de l'id dialogue*/ 
+function select_id_dialogue($conn, $id){
+	$sql="SELECT `id_dialogue` FROM `progression` WHERE `id`='$id' ";
+	global $debeug ;
+	if($debeug) echo $sql ; 
+	$res=mysqli_query($conn, $sql) ; 
+	$tab=rs_to_tab_progression($res) ;
+	return $tab ;
+}
+
+
+
 ?>

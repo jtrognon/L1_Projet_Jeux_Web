@@ -23,10 +23,10 @@ function create_histoire_form_vue(){
     let section = document.querySelector("#histoire");
 
     // Nom des fields
-    let tr_names = ["name", "action", "table", ""];
-    let tr_display_names = ["Nom de l'histoire : ", "", "", ""];
-    let tr_types = ["text", "hidden", "hidden", "submit"]
-    let tr_values = ["", "create", "histoire", "Ajouter"]
+    let tr_names = ["name", "url_img", "action", "table", ""];
+    let tr_display_names = ["Nom de l'histoire : ", "Chemin de l'image : ", "", "", ""];
+    let tr_types = ["text", "text", "hidden", "hidden", "submit"]
+    let tr_values = ["", "", "create", "histoire", "Ajouter"]
 
     create_form_vue(section, tr_display_names, tr_names, tr_types, tr_values); 
 }
@@ -36,9 +36,9 @@ function update_histoire_form_vue(tr_values){
     let section = document.querySelector("#histoire");
 
     // Nom des champs
-    let tr_names = ["id", "name", "action", "table", ""];
-    let tr_display_names = ["Identifiant : ", "Nom de l'histoire : ", "", "", ""];
-    let tr_types = ["text", "text", "hidden", "hidden", "submit"];
+    let tr_names = ["id", "name", "url_img", "action", "table", ""];
+    let tr_display_names = ["Identifiant : ", "Nom de l'histoire : ", "Chemin de l'image : ", "", "", ""];
+    let tr_types = ["text", "text", "text", "hidden", "hidden", "submit"];
     tr_values = tr_values.concat(["update", "histoire", "Modifier"]);
 
     create_form_vue(section, tr_display_names, tr_names, tr_types, tr_values)

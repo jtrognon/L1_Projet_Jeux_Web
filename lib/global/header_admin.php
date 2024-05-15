@@ -8,11 +8,7 @@ include("/home/grp1/public_html/db/db_connect.php");
 include("/home/grp1/public_html/CRUD/CRUD_connexion.php");
 include("/home/grp1/public_html/lib/global/global_fct_lib.php");
 
-if (!isset($redirection)){
-    $redirection = true;
-}
-
-is_connected($redirection);
+is_admin();
 
 
 if(isset($_GET["action"])){

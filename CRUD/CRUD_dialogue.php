@@ -82,7 +82,10 @@ function select_first_dialogue_histoire($conn, $id_histoire){
 
 
 /*Selectionner dialogue d'une histoire avec son id*/ 
-function select_id_dialogue_histoire($conn, $id_histoire,$id){
+function select_id_dialogue_histoire($conn,$id){
+	if(isset($_GET["id_histoire"])){
+        $id_histoire = $_GET["id_histoire"];
+    }
 	$sql="SELECT `texte` FROM `dialogue` WHERE `id_histoire`='$id_histoire' AND `id`= '$id' ";
 	global $debeug ;
 	if($debeug) echo $sql ; 
@@ -90,5 +93,17 @@ function select_id_dialogue_histoire($conn, $id_histoire,$id){
 	$tab=rs_to_tab_dialogue($res) ;
 	return $tab ;
 }
+
+/*Selectionner dialogue d'une histoire avec son id*/ 
+function select_texte_dialogue($conn,$id){
+	$sql="SELECT `texte` FROM `dialogue` WHERE `id`= '$id' ";
+	global $debeug ;
+	if($debeug) echo $sql ; 
+	$res=mysqli_query($conn, $sql) ; 
+	$tab=rs_to_tab_dialogue($res) ;
+	return $tab ;
+}
+
+
 
 ?>

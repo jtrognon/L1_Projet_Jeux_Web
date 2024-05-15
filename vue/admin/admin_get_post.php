@@ -12,7 +12,7 @@ if (isset($_GET["id_histoire"])){
     echo "let histoire_infos = $histoire_str;";
     echo "let id_histoire = ['$id_histoire'];";
 } else {
-    echo "let histoire_infos = ['', ''];";
+    echo "let histoire_infos = ['', '', ''];";
     echo "let id_histoire = [''];";
 }
 
@@ -58,10 +58,11 @@ if (isset($_POST["action"]) && isset($_POST["table"])){
 
     if ($action == "create"){
         if ($table == "histoire"){
-            if (isset($_POST["name"])){
+            if (isset($_POST["name"]) && isset($_POST["url_img"])){
                 $name = $_POST["name"];
+                $url_img = $_POST["url_img"];
 
-                create_histoire($conn, $name);
+                create_histoire($conn, $name, $url_img);
             }
         }
         if ($table == "personnage"){
@@ -102,8 +103,9 @@ if (isset($_POST["action"]) && isset($_POST["table"])){
             if (isset($_POST["id"]) && isset($_POST["name"])){
                 $id = $_POST["id"];
                 $name = $_POST["name"];
+                $url_img = $_POST["url_img"];
 
-                update_histoire($conn, $id, $name);
+                update_histoire($conn, $id, $name, $url_img);
             }
         } else if ($table == "personnage") {
             if (isset($_POST["id"]) && isset($_POST["image"]) && isset($_POST["name"]) && isset($_POST["color"])){

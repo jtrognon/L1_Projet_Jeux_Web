@@ -5,21 +5,130 @@
 }
 
 .onglet_histoire{
+    display: flex;
     border: 5px solid rgb(131, 248, 88);
     background-color: rgb(154, 28, 28);
+    margin-top : 1vh;
+    margin-bottom : 12.5vh;
+    margin-right: 12.5vw;
+    margin-left: 12.5vw;
+    width : 75vw;
+    height: 75vh;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .box {
     border: 5px solid rebeccapurple;
     background-color: lightgray;
-    padding: 40px;
-    margin: 40px;
-    width: 300px;
-    height: 150px;
-  }
+    margin: 1vw;
+}
 
+.box_affichage_personnage{
+    width: 12vw;
+    height: 60vh;
+}
 
+.box_affichage_dé{
+    width: 10vw;
+    height: 20vh;
+}
 
+.image_histoire{
+    width: 12vw;
+    height: 60vh;
+}
 
+/* --------------- DIALOGUES --------------- */
 
+.box_affichage_dialogues{
+    width: 40vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+.box_affichage_dialogues p {
+    margin: 10px;
+}
+
+.dialogue{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 20%;
+}
+
+#dialogue_1{
+    background-color: rgb(153, 225, 146);
+    border-radius: 1.5vh;
+    width: 70%;
+}
+
+#dialogue_2{
+    background-color: rgb(97, 94, 222);
+    border-radius: 1.5vh;
+    width: 70%;
+}
+
+#dialogue_3{
+    background-color: rgb(234, 97, 212);
+    border-radius: 1.5vh;
+    width: 70%;
+}
+
+/* --------------- ---------- --------------- */
+
+/* --------------- Choix des dialogues --------------- */
+
+.choix_unique{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.choix_unique button{
+    width: 12vw;
+    height: auto;
+}
+
+.choix_double{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(174, 174, 200);
+}
+
+.choix_double button{
+    width: 12vw;
+    height: auto;
+}
+
+.choix_triple{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+
+.choix_triple button{
+    width: 12vw;
+    height: auto;
+}
+    
+
+/* --------------- ---------- --------------- */
+
+.image_dé{
+    width: 10vw;
+    height: 20vh;
+}
+
+/* -------------- Admin -------------- */
+
+#list li{
+    display: flex;
+    background-color: brown;
+    justify-content: space-between;
+}
