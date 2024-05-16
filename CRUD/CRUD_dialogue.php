@@ -104,6 +104,25 @@ function select_texte_dialogue($conn,$id){
 	return $tab ;
 }
 
+/*Selectionner le 1er dialogue d'une histoire*/ 
+function select_id_first_dialogue_histoire($conn, $id_histoire){
+	$sql="SELECT `id` FROM `dialogue` WHERE `id_histoire`='$id_histoire' AND `premier_dialogue`= 1 ";
+	global $debeug ;
+	if($debeug) echo $sql ; 
+	$res=mysqli_query($conn, $sql) ; 
+	$tab=rs_to_tab_dialogue($res) ;
+	return $tab ;
+}
+
+/*Selectionner l'id personnage*/ 
+function select_id_personnage($conn, $id){
+	$sql="SELECT `id_personnage` FROM `dialogue` WHERE `id`='$id' ";
+	global $debeug ;
+	if($debeug) echo $sql ; 
+	$res=mysqli_query($conn, $sql) ; 
+	$tab=rs_to_tab_dialogue($res) ;
+	return $tab ;
+}
 
 
 ?>

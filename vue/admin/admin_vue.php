@@ -37,23 +37,7 @@ include("admin_fct.php");
     console.log(histoires);
 
     function body_onload(){
-        // histoire
-        create_histoire_form_vue(); 
-        update_histoire_form_vue(histoire_infos);
-        delete_histoire_form_vue(id_histoire);
-
-    
-        // personnage
-        create_personnage_form_vue();
-        update_personnage_form_vue(personnage_infos);
-        delete_personnage_form_vue(id_personnage);
-
-
-        // Dialogue
-        create_dialogue_form_vue();
-        update_dialogue_form_vue(dialogue_infos);
-        delete_dialogue_form_vue(id_dialogue);
-
+        
 
         // Display 
         display_histoires_vue(histoires);
@@ -66,18 +50,11 @@ include("admin_fct.php");
 
 
     <h2>Formulaires des histoires / personnages / dialogues</h2>
-    <section id="histoire">
-        <h3>Histoire</h3>
-    </section>
 
-    <section id="personnage">
-        <h3>Personnage</h3>
-    </section>
+    <section id="forms">
 
-    <section id="dialogue">
-        <h3>Dialogue</h3>
+        
     </section>
-
 
     <section id="list">
         <h2>Liste des histoires / personnages / dialogues</h2>

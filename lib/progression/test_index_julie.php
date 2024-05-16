@@ -7,6 +7,7 @@ ini_set('display_errors', '1');
 include("/home/grp1/public_html/db/db_connect.php");
 include("/home/grp1/public_html/CRUD/CRUD_progression.php");
 include("/home/grp1/public_html/CRUD/CRUD_dialogue.php");
+include("/home/grp1/public_html/CRUD/CRUD_personnage.php");
 
 include("progression_lib.php");
 ?>
@@ -21,9 +22,7 @@ include("progression_lib.php");
 <body>
 
 <?php
-    echo "coucou";
-    print_r(last_3_dialogue($conn, 1));
-
+    reset_progression_histoire($conn, 1, 1);
 
 
 

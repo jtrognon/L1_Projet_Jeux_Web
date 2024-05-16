@@ -4,6 +4,8 @@
     ini_set('display_errors', '1');
     include('../db/db_connect.php');
     include('../lib/fonction_histoire.php');
+    include('../CRUD/CRUD_progression.php');
+
 ?>
 
 
@@ -19,16 +21,27 @@
     <form method="post" action="index_chloe.php">
         <table>
                 <tr>
-                <th><strong>id</strong></th>
-                <td><input type="text" name="id"></td>
+                <th><strong>id_histoire</strong></th>
+                <td><input type="text" name="id_histoire"></td>
+                </tr>
+                <tr>
+                <th><strong>id_dialogue</strong></th>
+                <td><input type="text" name="id_dialogue"></td>
+                </tr>
+                <tr>
+                <th><strong>id_progression_precedent</strong></th>
+                <td><input type="text" name="id_progression_precedent"></td>
+                </tr>
+                <tr>
+                <th><strong>id_user</strong></th>
+                <td><input type="text" name="id_user"></td>
+                </tr>
         </table>
         <input type="submit" value="Envoyer">
     </form>
     <?php
-        if(isset($_POST["id"])){
-            $id = $_POST["id"]; 
-        }
-        print_r(return_dialogue_suivant($conn,$id));
+    $id_user=1;
+    print_r(dialogue_suivant($conn,$id_user, 1));
     ?>
 </body>
 </html>

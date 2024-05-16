@@ -62,4 +62,14 @@ function rs_to_tab_personnage($rs){
 	return $tab;
 }
 
+/*Selectionner l'url d'une image*/ 
+function select_perso($conn, $id){
+	$sql="SELECT `url_img` FROM `Personnage` WHERE `id`='$id' " ; 
+	global $debeug ;
+	if($debeug) echo $sql ; 
+	$res=mysqli_query($conn, $sql) ; 
+	$tab=rs_to_tab_personnage($res) ;
+	return $tab ;
+}
+
 ?>

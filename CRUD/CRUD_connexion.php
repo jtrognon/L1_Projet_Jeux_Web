@@ -51,5 +51,15 @@ function admin_connexion($conn,$login){
 	return $admin['admin'];
 }
 
+/*retourne l'id d'identifiant*/ 
+function id_connexion_login_passwd($conn,$login,$passwd){
+	$sql="SELECT id FROM `connexion` WHERE `login`= '$login'AND `passwd`='$passwd'";
+	$res=mysqli_query($conn, $sql) ;
+	$id = mysqli_fetch_assoc($res);
+	if ($id == false){
+		return null;
+	}
+	return $id['id'];
+}
 
 ?>

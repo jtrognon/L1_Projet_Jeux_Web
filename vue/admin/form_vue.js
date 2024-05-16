@@ -67,3 +67,18 @@ function create_input(name, type, value){
 
     return input;
 }
+
+
+
+// permet de créer la section qui accueil les formulaires
+function create_section(section_id, section_title){
+    let main_section = document.querySelector("#forms");
+
+    let section = document.createElement("section");
+    section.id = section_id;
+    main_section.appendChild(section);
+
+    let title = document.createElement("h3");
+    title.innerHTML = section_title;
+    section.appendChild(title);
+}

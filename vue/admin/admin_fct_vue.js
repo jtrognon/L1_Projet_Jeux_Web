@@ -19,6 +19,15 @@
 // Histoire
 // --------
 
+function display_histoire_forms_vue(){
+    create_section("histoire", "Histoire : "); // créé la section histoire qui permet d'ajouter les forms
+
+    create_histoire_form_vue(); // form de création
+    update_histoire_form_vue(histoire_infos); // form de mise à jour
+    delete_histoire_form_vue(id_histoire); // form pour la suppression
+}
+
+
 function create_histoire_form_vue(){
     let section = document.querySelector("#histoire");
 
@@ -61,6 +70,14 @@ function delete_histoire_form_vue(tr_values){
 // personnage
 // ---------
 
+function display_personnage_forms_vue(){
+    create_section("personnage", "Personnage : ");
+
+    create_personnage_form_vue();
+    update_personnage_form_vue(personnage_infos);
+    delete_personnage_form_vue(id_personnage);
+}
+
 function create_personnage_form_vue(){
     let section = document.querySelector("#personnage");
 
@@ -100,6 +117,13 @@ function delete_personnage_form_vue(tr_values){
 
 
 // Dialogue
+function display_dialogue_forms_vue(){
+    create_section("dialogue", "Dialogue : ");
+
+    create_dialogue_form_vue();
+    update_dialogue_form_vue(dialogue_infos);
+    delete_dialogue_form_vue(id_dialogue);
+}
 
 function create_dialogue_form_vue(){
     let section = document.querySelector("#dialogue");
