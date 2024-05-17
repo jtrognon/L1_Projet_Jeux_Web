@@ -9,7 +9,7 @@ include("/home/grp1/public_html/CRUD/CRUD_progression.php");
 include("/home/grp1/public_html/CRUD/CRUD_dialogue.php");
 include("/home/grp1/public_html/CRUD/CRUD_personnage.php");
 
-include("progression_lib.php");
+include("../fonction_histoire.php");
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +22,9 @@ include("progression_lib.php");
 <body>
 
 <?php
-    reset_progression_histoire($conn, 1, 1);
+    $id_user = 12;
+    $id_histoire = 1;
+    print_r(pourcentage_progression($conn,$id_user,$id_histoire));
 
 
 

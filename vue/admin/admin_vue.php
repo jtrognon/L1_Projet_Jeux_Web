@@ -29,6 +29,8 @@ include("admin_fct.php");
 <?php
     include("admin_get_post.php");
     load_histoires($conn);
+
+    load_personnage_list($conn);
 ?>
 
 </script>
@@ -37,11 +39,15 @@ include("admin_fct.php");
     console.log(histoires);
 
     function body_onload(){
-        
+
 
         // Display 
         display_histoires_vue(histoires);
+
+        display_all_personnage_vue(personnage_list);
     }
+
+    
 </script>
 
 <body onload="body_onload();">
@@ -53,11 +59,27 @@ include("admin_fct.php");
 
     <section id="forms">
 
+    <label for="choix_forms">Choix de la table à modifier : </label>
+    
+    <select id="choix_forms" onchange="forms_choice()">
+        <option value="histoire">Histoire</option>
+        <option value="personnage">Personnage</option>
+        <option value="dialogue">Dialogue</option>
+    </select>
         
+    <select id="choix_form_type" onchange="form_type_choice()">
+        <option value="all">Tout</option>
+        <option value="create">Ajouter</option>
+        <option value="update">Modifier</option>
+        <option value="delete">Supprimer</option>
+    </select>
+
     </section>
 
     <section id="list">
         <h2>Liste des histoires / personnages / dialogues</h2>
     </section>
+
+    <a href="../menu_vue.php">Menu</a>
 </body>
 </html>

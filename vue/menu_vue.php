@@ -2,6 +2,10 @@
     error_reporting(E_ALL);
     ini_set('display_errors', '1');
     include("../lib/global/header.php");
+    include("../lib/progression/progression_lib.php");
+    include("../CRUD/CRUD_histoire.php");
+    include("../CRUD/CRUD_progression.php");
+    include("../CRUD/CRUD_dialogue.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -13,74 +17,62 @@
     <script>
         <?php 
             if(isset($_SESSION["id_user"])){
-                $id = $_SESSION["id_user"];  
+                $id_user = $_SESSION["id_user"];  
 
-                $tab_login= login_connexion($conn,$id);             
+                $tab_login= login_connexion($conn,$id_user);             
                 
                 $login = $tab_login[0]["login"];
-                
                 echo("let login = '$login';");
+                
             }
 
+            if(isset($_POST["nouveau_mdp"])){
+                $passwd = $_POST["nouveau_mdp"];  
+
+                update_mdp($conn,$id,$passwd);       
+            }
+
+
+            // Check le reset de la progression de l'histoire
+            if (isset($_GET["action"]) && isset($_GET["id_histoire"])){
+                $action = $_GET["action"];
+                $id_histoire = $_GET["id_histoire"];
+
+                if ($action == "reset"){
+                    reset_progression_histoire($conn, $id_user, $id_histoire);
+                }
+            }
+
+            // Donne le nom des histoires
+            $histoires_list = liste_histoire($conn);
+            $histoires_name_list = [];
+            $histoires_id_list = [];
+            $histoires_progress_list = [];
+            for ($i=0; $i < count($histoires_list); $i++){
+                $histoire = $histoires_list[$i];
+                $histoires_name_list[] = $histoire["nom"];
+                $histoires_id_list[] = $histoire["id"];
+                $histoires_progress_list[] = pourcentage_progression($conn, $id_user, $histoire["id"]);
+            }
+
+            $histoires_name_str = json_encode($histoires_name_list);
+            $histoires_id_str = json_encode($histoires_id_list);
+            $histoires_progress_str = json_encode($histoires_progress_list);
+
+            echo "let histoires_name_list = $histoires_name_str;";
+            echo "let histoires_id_list = $histoires_id_str;";
+            echo "let histoires_progress_list = $histoires_progress_str;";
         ?>
+
+
     </script>
-    <script>
-        function myFunction(){
-
-                
-            let div= document.createElement("div");
-                document.body.appendChild(div);
-                div.classList.add("page_profil");
-                
-            let button = document.createElement("button");
-
-            let texte = document.createElement("h1");
-            let image = document.createElement("img");
-
-            let img = document.createElement("img");
-            let user_name = document.createElement("p");
-            let passwd = document.createElement("p");
-            let lien_deconnexion = document.createElement("p");
-            let progressionh1 = document.createElement("p");
-            let progressionh2 = document.createElement("p");
-            let reset = document.createElement("p");
-
-            image.src="images/retour.png";
-            button.appendChild(image);
-            
-            texte.innerHTML = "PROFIL";
-            img.src="images/icon.png";
-            user_name.innerHTML = login;
-            passwd.innerHTML = "Votre passwd";
-            lien_deconnexion.innerHTML = "lien_deconnexion";
-            progressionh1.innerHTML = "progression histoire1";
-            progressionh2.innerHTML = "progression histoire2";
-            reset.innerHTML = "reset";
-
-            div.appendChild(button);
-            div.appendChild(texte);
-            div.appendChild(img);
-            div.appendChild(user_name);
-            div.appendChild(passwd);
-            div.appendChild(lien_deconnexion);
-            div.appendChild(progressionh1);
-            div.appendChild(progressionh2);
-            div.appendChild(reset);
-
-            button.onclick= myFunction2;
-        }
-
-        function myFunction2(){
-            let div = document.querySelector(".page_profil")
-            document.body.removeChild(div);
-        }
-    </script> 
+    <script src="menu_fct_vue.js"></script> 
 </head>
-<body>
+<body  onload="display_stories();">
     <div class= "header_menu">
         <img id="logo" src="images/titre.png" alt="Logo"/>
 
-        <div> <button onclick="myFunction()" id="profil"><img src="images/icon.png" alt="Profil"></button> 
+        <div> <button onclick="display_profil_menu()" id="profil"><img src="images/icon.png" alt="Profil"></button> 
             
         </div>
     </div>
@@ -92,10 +84,6 @@
         <h2>Histoires</h2>
 
         <section class="icon">
-                <a href="histoire_vue.php?id_histoire=1"><img src="images/test1.jpg" ></a>
-                <br>
-                <a href="histoire_vue.php?id_histoire=2"><img src="images/test2.jpg"></a>
-            
         </section>
     </main>
 

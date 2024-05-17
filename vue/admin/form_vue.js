@@ -76,9 +76,24 @@ function create_section(section_id, section_title){
 
     let section = document.createElement("section");
     section.id = section_id;
+    section.classList.add("form");
     main_section.appendChild(section);
 
     let title = document.createElement("h3");
     title.innerHTML = section_title;
     section.appendChild(title);
 }
+
+
+function clear_sections(){
+    let main_section = document.querySelector("#forms");
+    let sections = document.querySelectorAll(".form");
+
+    for (let i=0; i < sections.length; i++){
+        let section = sections[i];
+
+        main_section.removeChild(section);        
+    }
+}
+
+

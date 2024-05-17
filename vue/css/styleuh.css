@@ -1,73 +1,62 @@
 body{
-    background-image: url('images/fond.png');
-    background-size: cover;
-    background-color:beige
-    
+    background-image: url('../images/fond.png');
+    background-size: cover;    
 }
 
-
-header{
+.header_menu{
     display: flex;
-    justify-content: space-between;
     border: 2px solid rgb(250, 228, 179);
     padding: 1px;
     height: 100px;
     width: 70%;
     margin: 0 auto;
-    text-align: center;
     border-radius: 10px;
     background-color:rgb(250, 228, 179);
 }
 
-.header_menu img{
-    height: 150px;
-    width: 60%;
+.header_menu button{
+    height: 100px;
     margin: 0 auto;
-    text-align: left;
+    border-radius: 60px;
+    padding:0px
 }
 
+.header_menu img{
+    margin: 0px;
+}
+
+#logo {
+    width: 20vw;
+    height: 150%; 
+    margin: 0 auto;
+}
 
 h1{
     font-family: 'Helvetica';
     color: maroon;
     font-size: 40px;
-    
 }
+
 h2{
     display: flex;
-    text-align: center;
+    justify-content: center;
     font-family: 'Helvetica';
     font-size : 30px;
     color: maroon;
 }
-h3{
-    font-family: 'Helvetica';
-}
-h4{
-     font-family: 'Helvetica';
-
-}
-
-
-
-
 
 .main_menu{
-    border: 2px solidrgb(250, 228, 179);
-    padding: 100px;
-    height: 600px;
+    padding-top: 10px;
+    height: 35vw;
     width: 60%;
-    margin: 0 auto;
+    margin: auto;
     text-align: center;
     border-radius: 10px;
     background-color:rgb(250, 228, 179);
 }
 
 .icon{
-    
     display: flex;
-    
-
 }
 .icon img{
     width: 80%;
@@ -75,14 +64,55 @@ h4{
 }
 
 
-
-.centered{
-
-    text-align: center;
-}
-
 .footer_menu {
     text-decoration : none;
 }
 
 
+.lien {
+    text-align: center; 
+}
+
+.lien a {
+    margin: 0 430px; 
+}
+
+a {
+    text-decoration: None;
+
+}
+
+.page_profil{
+    width:30vw;
+    height: 100vh;
+    background-color: red;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 10px;
+}
+
+.page_profil h1{
+    color: aqua;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.page_profil p{
+    text-align: center;
+}
+.formulaire_profil{
+    background-color: red;
+    text-align: center;
+}
+.page_profil img{
+    width: 45%;
+    display: flex;
+    margin:auto;
+}
+
+.page_profil button{
+    /*background-color: red;*/
+    width: 10vw;
+    border:0px;
+}

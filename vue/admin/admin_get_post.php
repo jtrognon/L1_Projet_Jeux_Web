@@ -35,7 +35,7 @@ if (isset($_GET["id_dialogue"])){
 if (isset($_GET["id_personnage"])){
     $id_personnage = $_GET["id_personnage"];
     
-    $personnage_infos = select_personnage($conn, $id_personnage);
+    $personnage_infos = select_perso($conn, $id_personnage)[0];
     $personnage_list = dict_to_list($personnage_infos);
     $personnage_str = json_encode($personnage_list);
 

@@ -143,6 +143,25 @@ function last_3_personnage($conn, $id_user, $id_histoire){
     return $personnage_list;
 }
 
+
+function last_3_couleur($conn, $id_user, $id_histoire){
+    $dialogue_id_list = last_3_dialogue_id($conn, $id_user, $id_histoire);
+    $personnage_list = [];
+
+    foreach ($dialogue_id_list as $id){
+        $id_personnage = select_id_personnage($conn,$id)[0]["id_personnage"];
+        $color = select_couleur_perso($conn, $id_personnage)[0]["couleur"];
+        $personnage_list[] = $color;
+    }
+
+    for ($i=count($personnage_list)-1; $i < 3; $i++){
+        $personnage_list[] = "";
+    }
+
+    return $personnage_list;
+}
+
+
 function save_choice($conn, $id_user, $id_histoire, $choice){
     // Progression précédente
     $id_progression = last_progression($conn, $id_user, $id_histoire);
@@ -171,7 +190,18 @@ function pourcentage_progression($conn, $id_user, $id_histoire){
     $ids_progression_list = select_ids_progression($conn, $id_user, $id_histoire);
     $dialogue_list = select_dialogue_histoire($conn, $id_histoire);
 
-    return (count($ids_progression_list) / count($dialogue_list));  
+    if (count($dialogue_list) == 0) {
+        $progression = 0;
+    } else {
+        $last_dialogue_id = last_dialogue($conn, $id_user, $id_histoire);
+        if ($last_dialogue_id == 0){
+            $progression = 1;
+        } else {
+            $progression = (count($ids_progression_list) / count($dialogue_list));
+        }
+    }
+
+    return $progression;
 }
 
 
