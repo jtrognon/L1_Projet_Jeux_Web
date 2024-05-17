@@ -5,6 +5,7 @@ include("../lib/fonction_histoire.php");
 include("/home/grp1/public_html/CRUD/CRUD_progression.php");
 include("/home/grp1/public_html/CRUD/CRUD_dialogue.php");
 include("/home/grp1/public_html/CRUD/CRUD_personnage.php");
+include("/home/grp1/public_html/CRUD/CRUD_histoire.php");
 ?>
 <html>
 	<head>
@@ -22,11 +23,11 @@ if (isset($_POST["1"])){
 ?>
 <body id="Histoire_Vue">
 	<?php
-	if ($_GET["id_histoire"]==1){
-		echo("<h1 class='titre'> La conquête des étoiles.</h1>");
-	}else if ($_GET["id_histoire"]==2){
-		echo("<h1 class='titre'>Les schtroumphs</h1>");
-	}
+	$id_histoire = $_GET["id_histoire"];
+	$nom_histoire = select_histoire($conn, $id_histoire)[0]["nom"];
+
+	echo "<h1 class='titre'>$nom_histoire</h1>";
+
 	?>
 
 	<table class="barre_menu">
@@ -34,7 +35,7 @@ if (isset($_POST["1"])){
 			<tr>
 				<th><a href="">Profil</a></th>
 				<th><a href="">Aide</a></th>
-				<th><a href="menu_vue.php">Menu</a></th>
+				<th><a href="../index.php">Menu</a></th>
 			</tr>
 		</thead>
 	</table>

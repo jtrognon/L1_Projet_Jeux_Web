@@ -1,13 +1,27 @@
+#Histoire_Vue, #Fin_Vue{
+    background-image: url('../images/fond.png');
+    background-size: cover;    
+}
+
+.titre{
+    text-align: center;
+}
+
 .barre_menu{
+    text-decoration: none;
     border-collapse: collapse;
     border: 2px solid rgb(140 140 140);
     letter-spacing: 1px;
 }
 
+.barre_menu a{
+    text-decoration: none;
+}
+
 .onglet_histoire{
     display: flex;
-    border: 5px solid rgb(131, 248, 88);
-    background-color: rgb(154, 28, 28);
+    border: 5px solid rgb(233, 133, 32);
+    background-color: rgb(230, 170, 111);
     margin-top : 1vh;
     margin-bottom : 12.5vh;
     margin-right: 12.5vw;
@@ -61,6 +75,10 @@
     height: 20%;
 }
 
+.image_perso_dialogue{
+    height: 100%;
+}
+
 #dialogue_1{
     background-color: rgb(153, 225, 146);
     border-radius: 1.5vh;
@@ -99,6 +117,9 @@
     flex-direction: row;
     justify-content: space-between;
     background-color: rgb(174, 174, 200);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;   
 }
 
 .choix_double button{
@@ -132,3 +153,22 @@
     background-color: brown;
     justify-content: space-between;
 }
+
+/* -------------- Boutons -------------- */
+
+.bouton_choix {
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: Inter,sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
+.bouton_choix:hover {
+  outline: 0;
+}
+
+/* --------------- ---------- --------------- */

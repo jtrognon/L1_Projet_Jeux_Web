@@ -63,8 +63,18 @@ function rs_to_tab_personnage($rs){
 }
 
 /*Selectionner l'url d'une image*/ 
-function select_perso($conn, $id){
-	$sql="SELECT `url_img` FROM `Personnage` WHERE `id`='$id' " ; 
+function select_url_perso($conn, $id){
+	$sql="SELECT `url_image` FROM `Personnage` WHERE `id`='$id' " ; 
+	global $debeug ;
+	if($debeug) echo $sql ; 
+	$res=mysqli_query($conn, $sql) ; 
+	$tab=rs_to_tab_personnage($res) ;
+	return $tab ;
+}
+
+/*Selectionner la couleur d'un personnage*/ 
+function select_couleur_perso($conn, $id){
+	$sql="SELECT `couleur` FROM `Personnage` WHERE `id`='$id' " ; 
 	global $debeug ;
 	if($debeug) echo $sql ; 
 	$res=mysqli_query($conn, $sql) ; 

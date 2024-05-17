@@ -4,8 +4,7 @@
     ini_set('display_errors', '1');
     include('../db/db_connect.php');
     include('../lib/fonction_histoire.php');
-    include('../CRUD/CRUD_progression.php');
-
+    include('../CRUD/CRUD_dialogue.php');
 ?>
 
 
@@ -40,8 +39,15 @@
         <input type="submit" value="Envoyer">
     </form>
     <?php
-    $id_user=1;
-    print_r(dialogue_suivant($conn,$id_user, 1));
+        if(isset($_POST["id_histoire"])){
+            $id_histoire = $_POST["id_histoire"];
+            $id_dialogue = $_POST["id_dialogue"];
+            $id_progression_precedent = $_POST["id_progression_precedent"];
+            $id_user = $_POST["id_user"];
+            
+        }
+        $id =4;
+        echo(select_de($conn, $id));
     ?>
 </body>
 </html>

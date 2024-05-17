@@ -62,4 +62,37 @@ function id_connexion_login_passwd($conn,$login,$passwd){
 	return $id['id'];
 }
 
+/*retourne la valeur de login*/ 
+function login_connexion($conn,$id_user){
+	$sql="SELECT `login` FROM `connexion` WHERE `id`= '$id_user'";
+	$res=mysqli_query($conn, $sql) ; 
+	return rs_to_tab_connexion($res) ;
+}
+
+/* Retourne la valeur de passwd */ 
+function passwd_connexion($conn,$id_user){
+	$sql="SELECT `passwd` FROM `connexion` WHERE `id`= '$id_user'";
+	$res=mysqli_query($conn, $sql) ; 
+	return rs_to_tab_connexion($res) ;
+}
+
+function rs_to_tab_connexion($rs){
+	$tab=[] ; 
+	while($row=mysqli_fetch_assoc($rs)){
+		$tab[]=$row ;	
+	}
+	return $tab;
+}
+
+/*modifie le mot de passe*/ 
+function update_mdp($conn,$id_user,$passwd){
+
+	$sql="UPDATE `connexion` SET `passwd`='$passwd' WHERE `id`='$id_user'" ;
+	global $debeug ;
+	if($debeug) echo $sql ; 
+	$res=mysqli_query($conn, $sql) ; 
+	return $res ;
+}
+
+
 ?>

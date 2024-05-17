@@ -2,6 +2,13 @@
 -------------- Admin --------------
 */
 
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+}
+
+
 #list li{
     display: flex;
     background-color: brown;

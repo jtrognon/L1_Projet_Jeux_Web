@@ -80,6 +80,6 @@ include("admin_fct.php");
         <h2>Liste des histoires / personnages / dialogues</h2>
     </section>
 
-    <a href="../menu_vue.php">Menu</a>
+    <a href="../../index.php">Menu</a>
 </body>
 </html>

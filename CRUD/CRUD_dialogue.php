@@ -124,5 +124,33 @@ function select_id_personnage($conn, $id){
 	return $tab ;
 }
 
+/*Selectionner l'id dialogue_necessaire*/ 
+function select_id_dialogue_necessaire($conn, $id){
+	$sql="SELECT `id_dialogue_necessaire` FROM `dialogue` WHERE `id`='$id' ";
+	global $debeug ;
+	if($debeug) echo $sql ; 
+	$res=mysqli_query($conn, $sql) ; 
+	$tab=rs_to_tab_dialogue($res) ;
+	return $tab ;
+}
+
+/*Selectionner le dé*/ 
+function select_de($conn, $id){
+	$sql="SELECT `dé` FROM `dialogue` WHERE `id`='$id' ";
+	global $debeug ;
+	if($debeug) echo $sql ; 
+	$res=mysqli_query($conn, $sql);
+	$tab=rs_to_tab_dialogue($res);
+	$ret = $tab[0]['dé'] ; 
+	if ($ret == 1){
+		return ("True");
+	}
+
+	else{
+		return ("False");
+	}
+}
+
+
 
 ?>

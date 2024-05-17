@@ -17,7 +17,7 @@ function display_profil_menu(){
     
     // Image du bouton de fermeture du menu
     let image = document.createElement("img");
-    image.src="images/retour.png";
+    image.src="vue/images/retour.png";
     button.appendChild(image);
     
     
@@ -32,7 +32,7 @@ function display_profil_menu(){
 
     // Image du profil
     let img = document.createElement("img");
-    img.src="images/icon.png";
+    img.src="vue/images/icon.png";
     div.appendChild(img);
 
     // Nom de l'utilisateur
@@ -77,7 +77,7 @@ function display_profil_menu(){
 
         // Reset histoire
         let reset = document.createElement("a");
-        reset.href = "menu_vue.php?action=reset&id_histoire=" + histoires_id_list[i];
+        reset.href = "index.php?action=reset&id_histoire=" + histoires_id_list[i];
         reset.innerHTML = "reset";
         div.appendChild(reset);
 
@@ -99,19 +99,19 @@ function display_passwd_form(){
     // Formulaire de modification du mdp
     let formulaire = document.querySelector("form");
     formulaire.innerHTML = "";
-    formulaire.action = "menu_vue.php?login="+login;
+    formulaire.action = "index.php?login="+login;
     formulaire.method = "post";
     
     // Entrée du nouveau mdp
     let texte = document.createElement("input");
-    button.type = "submit";
-    button.innerHTML="envoyer";
+    texte.type = "text";
+    texte.name = "nouveau_mdp";
     formulaire.appendChild(texte);
     
     // Bouton de soumission du formulaire
     let button = document.createElement("input");
-    texte.type = "text";
-    texte.name = "nouveau_mdp";
+    button.type = "submit";
+    button.innerHTML="envoyer";
     formulaire.appendChild(button);
 }
 
@@ -120,19 +120,19 @@ function display_stories(){
     let section = document.querySelector(".icon");
 
     for (let i=0; i < histoires_id_list.length; i++){
+        // Titre de l'histoire
+        let h2 = document.createElement("h2");
+        h2.innerHTML = histoires_name_list[i];
+        section.appendChild(h2);
+
         // Création du lien de la page histoire
         let a = document.createElement("a");
-        a.href = "histoire_vue.php?id_histoire=" + histoires_id_list[i];
+        a.href = "vue/histoire_vue.php?id_histoire=" + histoires_id_list[i];
         section.appendChild(a);
 
         // Création de l'image dans le lien
         let img = document.createElement("img");
-        img.src = "images/image_histoire_" + histoires_id_list[i] + ".jpg"; 
+        img.src = "vue/images/image_histoire_" + histoires_id_list[i] + ".jpg"; 
         a.appendChild(img);
     }
-
-
-    // <a href="histoire_vue.php?id_histoire=1"><img src="images/test1.jpg" ></a>
-    // <br>
-    // <a href="histoire_vue.php?id_histoire=2"><img src="images/test2.jpg"></a>
 }

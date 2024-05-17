@@ -14,7 +14,7 @@ if(isset($_POST["login"])){
 		$admi = admin_connexion($conn,$_POST["login"]);
 		$_SESSION["id_user"] = $id;
 		$_SESSION["admin"] = $admi ;
-		header("Location: /~grp1/vue/menu_vue.php"); 
+		header("Location: /~grp1/index.php"); 
 	}
 }
 
@@ -27,7 +27,7 @@ if(isset($_POST["login"])){
 	<body>
 	<form method="POST" action="">
 	Login:	<input type="text" name="login">
-	Passwd:	<input type="text" name="passwd">
+	Passwd:	<input type="password" name="passwd">
 		<input type="submit">
 	</form>
 

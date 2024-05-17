@@ -22,9 +22,9 @@ include("../fonction_histoire.php");
 <body>
 
 <?php
-    $id_user = 12;
+    $id_user = 35;
     $id_histoire = 1;
-    print_r(pourcentage_progression($conn,$id_user,$id_histoire));
+    reset_progression_histoire($conn, $id_user, $id_histoire);
 
 
 

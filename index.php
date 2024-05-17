@@ -1,19 +1,19 @@
 <?php
     error_reporting(E_ALL);
     ini_set('display_errors', '1');
-    include("../lib/global/header.php");
-    include("../lib/progression/progression_lib.php");
-    include("../CRUD/CRUD_histoire.php");
-    include("../CRUD/CRUD_progression.php");
-    include("../CRUD/CRUD_dialogue.php");
+    include("lib/global/header.php");
+    include("lib/progression/progression_lib.php");
+    include("CRUD/CRUD_histoire.php");
+    include("CRUD/CRUD_progression.php");
+    include("CRUD/CRUD_dialogue.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styleuh.css">
-    <title>Home Page</title> 
+    <link rel="stylesheet" href="vue/css/styleuh.css">
+    <title>Accueil</title> 
     <script>
         <?php 
             if(isset($_SESSION["id_user"])){
@@ -29,7 +29,7 @@
             if(isset($_POST["nouveau_mdp"])){
                 $passwd = $_POST["nouveau_mdp"];  
 
-                update_mdp($conn,$id,$passwd);       
+                update_mdp($conn,$id_user,$passwd);       
             }
 
 
@@ -66,16 +66,14 @@
 
 
     </script>
-    <script src="menu_fct_vue.js"></script> 
+    <script src="vue/menu_fct_vue.js"></script> 
 </head>
 <body  onload="display_stories();">
-    <div class= "header_menu">
-        <img id="logo" src="images/titre.png" alt="Logo"/>
+    <header>
+        <img id="logo" src="vue/images/titre.png" alt="Logo"/>
 
-        <div> <button onclick="display_profil_menu()" id="profil"><img src="images/icon.png" alt="Profil"></button> 
-            
-        </div>
-    </div>
+        <button onclick="display_profil_menu()" id="profil"><img src="vue/images/icon.png" alt="Profil"></button>
+    </header>
    
     <br>
 
@@ -89,8 +87,8 @@
 
     <footer class= "footer_menu" >
         <div class="lien">
-            <a href="menu_connexion_vue.php?action=disconnect">Deconnexion</a>
-            <a href="https://l1.dptinfo-usmb.fr/~grp1/vue/admin/admin_vue.php">Admin</a>
+            <a href="vue/menu_connexion_vue.php?action=disconnect">Deconnexion</a>
+            <a href="vue/admin/admin_vue.php">Admin</a>
         </div>
     </footer>
 

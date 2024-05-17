@@ -61,4 +61,14 @@ function rs_to_tab_histoire($rs){
 	return $tab;
 }
 
+/*Selectionner une id*/ 
+function select_id_histoire($conn, $nom,$url_img){
+	$sql="SELECT `id` FROM `histoire` WHERE `nom`='$nom' AND `url_img`='$url_img'";
+	global $debeug ;
+	if($debeug) echo $sql ; 
+	$res=mysqli_query($conn, $sql) ; 
+	$tab=rs_to_tab_histoire($res) ;
+	return $tab ;
+}
+
 ?>

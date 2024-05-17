@@ -1,34 +1,49 @@
 body{
-    background-image: url('../images/fond.png');
-    background-size: cover;    
+    background-image: url('../images/fond_flou.png');
+    background-size: cover; 
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center; 
+
 }
 
-.header_menu{
-    display: flex;
-    border: 2px solid rgb(250, 228, 179);
-    padding: 1px;
+header{
+    /* Border */
+    border : 0px;
+    border-radius: 10px;
+    
+    /* Couleurs */
+    background-color: aliceblue;
+    
+    /* margin - padding */
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
     height: 100px;
     width: 70%;
-    margin: 0 auto;
-    border-radius: 10px;
-    background-color:rgb(250, 228, 179);
+    
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
 }
 
-.header_menu button{
+
+
+header button{
     height: 100px;
-    margin: 0 auto;
+    margin-right: 5vw;
     border-radius: 60px;
     padding:0px
 }
 
-.header_menu img{
+header img{
     margin: 0px;
 }
 
 #logo {
-    width: 20vw;
-    height: 150%; 
-    margin: 0 auto;
+    height: 95px;
+    margin-left: 5vw;
 }
 
 h1{
@@ -52,7 +67,7 @@ h2{
     margin: auto;
     text-align: center;
     border-radius: 10px;
-    background-color:rgb(250, 228, 179);
+    background-color: aliceblue;
 }
 
 .icon{

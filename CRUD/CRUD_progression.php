@@ -86,6 +86,11 @@ function select_id_dialogue($conn, $id){
 	return $tab ;
 }
 
-
+/* Suprimer progression une histoire */
+function delete_progression($conn, $id_user,$id_histoire){
+	$sql="DELETE FROM `progression` WHERE `id_user`='$id_user' AND `id_histoire`='$id_histoire'" ;
+	$ret=mysqli_query($conn, $sql) ;
+	return $ret ; 
+}
 
 ?>
