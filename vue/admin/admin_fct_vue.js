@@ -17,7 +17,7 @@ function forms_choice(){
         display_histoire_forms_vue();
     } else if (choice == "personnage"){
         display_personnage_forms_vue();
-    } else {
+    } else if (choice == "dialogue"){
         display_dialogue_forms_vue();
     }
 }
@@ -35,7 +35,7 @@ function form_type_choice(){
         display_histoire_forms_vue(type_choice);
     } else if (forms_choice == "personnage"){
         display_personnage_forms_vue(type_choice);
-    } else {
+    } else if (forms_choice == "dialogue") {
         display_dialogue_forms_vue(type_choice);
     }
 }
@@ -304,6 +304,10 @@ function display_personnage_vue(id_histoire, id_dialogue){
 function display_all_personnage_vue(personnage_list){
     let section = document.querySelector("#list");
 
+    let h3 = document.createElement("h3");
+    h3.innerHTML = "Personnages : ";
+    section.appendChild(h3);
+
     let ul = document.createElement("ul");
     section.appendChild(ul);
 
@@ -317,7 +321,7 @@ function display_all_personnage_vue(personnage_list){
 
     let infos = [id, nom, url];
 
-    let li = create_dropdown(infos, id, "personnage", 0, false); // false permet de ne pas afficher un bouton pour dérouler
+    let li = create_dropdown(infos, id, "all_personnage", 0, false); // false permet de ne pas afficher un bouton pour dérouler
     ul.appendChild(li);
     }
 }
@@ -364,10 +368,14 @@ function create_expand_button(id, type, id_histoire){
     
     button.type = "button";
     button.onclick = expand;
-    button.innerHTML = "Dérouler";
+
+    let img = document.createElement("img");
+    img.src = "../images/down-arrow.png";
+    img.id = "down";
+    button.appendChild(img);
     
     button.button_type = type;
-    button.button_id = id;
+    button.button_id = id; 
     button.button_id_histoire = id_histoire;
     
     
@@ -376,6 +384,7 @@ function create_expand_button(id, type, id_histoire){
 
 
 function expand(){
+
     let id = this.button_id;
     let id_histoire = this.button_id_histoire;
     let type = this.button_type;
@@ -385,19 +394,37 @@ function expand(){
         
         if (histoire.children.length < 5){
             display_dialogues_vue(id);
+            change_button_img(this);
         } else {
             let dialogues = histoire.children[4];
             histoire.removeChild(dialogues);
+            change_button_img(this);
         }
     } else if (type == "dialogue"){
         let dialogue = document.querySelector("#dialogue_" + id);
 
         if (dialogue.children.length < 6){
             display_personnage_vue(id_histoire, id);
+            change_button_img(this);
         } else {
             let personnage = dialogue.children[5];
             dialogue.removeChild(personnage);
+            change_button_img(this);
         }
     }
 
+}
+
+
+
+function change_button_img(button){
+    let img = button.children[0];
+
+    if (img.id == "down"){
+        img.src = "../images/up-arrow.png";
+        img.id = "up";
+    } else {
+        img.src = "../images/down-arrow.png";
+        img.id = "down";
+    }
 }

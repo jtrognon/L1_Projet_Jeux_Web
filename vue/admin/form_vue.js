@@ -39,9 +39,11 @@ function create_tr_line(display_name, name, type, value){
     let tr = document.createElement("tr");
 
     // Case d'affichage de nom d'entrée
-    let td_name = document.createElement("td");
-    td_name.innerHTML = display_name; // stoque le nom d'affichage dans la case
-    tr.appendChild(td_name);
+    if (type != "submit"){
+        let td_name = document.createElement("td");
+        td_name.innerHTML = display_name; // stoque le nom d'affichage dans la case
+        tr.appendChild(td_name);
+    }
 
     // Case d'entrée
     let td_input = document.createElement("td");

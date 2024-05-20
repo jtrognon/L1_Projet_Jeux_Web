@@ -22,16 +22,28 @@ if(isset($_POST["login"])){
 <html>
 	<head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style_connexion.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+	<title>Connexion</title>
 	</head>
 
 	<body>
-	<form method="POST" action="">
-	Login:	<input type="text" name="login">
-	Passwd:	<input type="password" name="passwd">
-		<input type="submit">
-	</form>
+	<div class = "div_connexion">
+		<h1>Connexion</h1>
+		<form method="POST" action="">
+			Pseudo:<input type="text" name="login">
+			<br>
+			Mot de passe:<input type="password" name="passwd">
+			<br>
+			<input type="submit" value="Connexion" id="bouton_connexion">
+		</form>
 
-	<a href="menu_connexion_vue.php" >Retour</a> </br>
-
+		<a href="menu_connexion_vue.php" >Retour</a> 
+		</br>
+	</div>
 	</body>
 </html>

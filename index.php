@@ -72,14 +72,15 @@
     <header>
         <img id="logo" src="vue/images/titre.png" alt="Logo"/>
 
+        <h2>Histoires</h2>
+
         <button onclick="display_profil_menu()" id="profil"><img src="vue/images/icon.png" alt="Profil"></button>
     </header>
-   
+   <br><br>
     <br>
 
     <main class="main_menu">
-        
-        <h2>Histoires</h2>
+    
 
         <section class="icon">
         </section>

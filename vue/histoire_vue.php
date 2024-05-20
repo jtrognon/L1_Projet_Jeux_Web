@@ -21,53 +21,79 @@ if (isset($_POST["1"])){
 	save_choice($conn, $_SESSION["id_user"],$_GET["id_histoire"], "3");
 }
 ?>
-<body id="Histoire_Vue">
+<?php
+	$id_histoire = $_GET["id_histoire"];
+	echo("<body style='"."background-image: url(images/fond_histoire$id_histoire.jpg)".";background-size: cover;'>");
+	
+	if($id_histoire == 1){
+		echo("<header class='header1'>");
+		
+	}else if($id_histoire == 2){
+		echo("<header class='header2'>");
+		
+	}
+?>
+        <img id="logo" src="images/titre.png" alt="Logo"/>
+		
+		<?php
+			$id_histoire = $_GET["id_histoire"];
+			$nom_histoire = select_histoire($conn, $id_histoire)[0]["nom"];
+
+			echo "<h1 class='titre'>$nom_histoire</h1>";
+		?>
+
+        <table class="barre_menu">
+			<thead>
+				<tr>
+					<th><a href="../index.php"><img id="maison" src="images/maison.png" alt="Logo"/></a></th>
+				</tr>
+			</thead>
+		</table>
+	</header>
+
+	
 	<?php
 	$id_histoire = $_GET["id_histoire"];
-	$nom_histoire = select_histoire($conn, $id_histoire)[0]["nom"];
+	if($id_histoire == 1){
+		echo("<div class='onglet_histoire1'>");
+		echo("<div class='box1 box_affichage_personnage'>");
+		$img = url_img_histoire($conn);
+		echo("<img src="."'images/$img' class="."'image_histoire'"."/></div>");
 
-	echo "<h1 class='titre'>$nom_histoire</h1>";
+		echo("<div class='box1'>");
+		echo("<div class='sous_box1 box_affichage_dialogues'>");
+	}else if($id_histoire == 2){
+		echo("<div class='onglet_histoire2'>");
+		echo("<div class='box2 box_affichage_personnage'>");
+		$img = url_img_histoire($conn);
+		echo("<img src="."'images/$img' class="."'image_histoire'"."/></div>");
 
+		echo("<div class='box2'>");
+		echo("<div class='sous_box2 box_affichage_dialogues'>");
+	}
 	?>
-
-	<table class="barre_menu">
-		<thead>
-			<tr>
-				<th><a href="">Profil</a></th>
-				<th><a href="">Aide</a></th>
-				<th><a href="../index.php">Menu</a></th>
-			</tr>
-		</thead>
-	</table>
-
-	<div class="onglet_histoire">
-		<div class="box box_affichage_personnage">
-			<?php
-				$img = url_img_histoire($conn);
-				echo("<img src="."'images/$img' class="."'image_histoire'"."/>");
-			?>
-		</div>
-		
-		<div class="box">
-			<div class="box box_affichage_dialogues">
 				<?php
 					$dialogues = last_3_dialogue($conn, $_SESSION["id_user"],$_GET["id_histoire"]);
 					$perso = last_3_personnage($conn, $_SESSION["id_user"],$_GET["id_histoire"]);
+					$couleur = last_3_couleur($conn, $_SESSION["id_user"],$_GET["id_histoire"]);
 					$dialogue_1 = $dialogues[2];
 					$perso_1 = $perso[2];
+					$couleur_1 = $couleur[2];
 					$dialogue_2 = $dialogues[1];
 					$perso_2 = $perso[1];
+					$couleur_2 = $couleur[1];
 					$dialogue_3 = $dialogues[0];
 					$perso_3 = $perso[0];
+					$couleur_3 = $couleur[0];
 					
 					if ($perso_1 != ""){
-						$partie1 = "<div><img src="."'images/$perso_1' class="."'image_perso_dialogue'"."></div><div id='dialogue_1'>$dialogue_1</div>";
+						$partie1 = "<div><img src="."'images/$perso_1' class="."'image_perso_dialogue'"."></div><div id='dialogue_1' style='background-color: $couleur_1;'>$dialogue_1</div>";
 					} else {
 						$partie1 = "";
 					}
 
 					if ($perso_2 != ""){
-						$partie2 = "<div id='dialogue_2'>$dialogue_2</div><div><img src="."'images/$perso_2' class="."'image_perso_dialogue'"."></div>";
+						$partie2 = "<div id='dialogue_2' style='background-color: $couleur_2;'>$dialogue_2</div><div><img src="."'images/$perso_2' class="."'image_perso_dialogue'"."></div>";
 					} else {
 						$partie2 = "";
 					}
@@ -80,12 +106,14 @@ if (isset($_POST["1"])){
 						</div>
 						<div class='dialogue'>
 							<div><img src="."'images/$perso_3' class="."'image_perso_dialogue'"."></div>
-							<div id='dialogue_3'>$dialogue_3</div>
+							<div id='dialogue_3' style='background-color: $couleur_3;'>$dialogue_3</div>
 						</div>
 					");
 				?>
 			</div>
-			<div class="box box_choix_dialogue">
+			
+			
+			<div class="box_choix_dialogue">
 				<?php
 					$dialogues = dialogue_suivant($conn,$_SESSION["id_user"],$_GET["id_histoire"]);
 					$nb_dialogue = nb_dialogue_suivant($conn, $_SESSION["id_user"],$_GET["id_histoire"]);
@@ -131,7 +159,16 @@ if (isset($_POST["1"])){
 				?>
 			</div>
 		</div>
-		<div class="box box_affichage_dé">
+	<?php
+		$id_histoire = $_GET["id_histoire"];
+		if($id_histoire == 1){
+			echo("<div class='box1 box_affichage_dé'>");
+			
+		}else if($id_histoire == 2){
+			echo("<div class='box2 box_affichage_dé'>");
+			
+		}
+	?>
 			<?php
 				
 				$lancer_dé = select_de($conn, last_dialogue($conn,$_SESSION["id_user"],$_GET["id_histoire"]));

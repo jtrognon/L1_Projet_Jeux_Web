@@ -4,6 +4,7 @@ body{
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center; 
+    
 
 }
 
@@ -12,8 +13,9 @@ header{
     border : 0px;
     border-radius: 10px;
     
+    
     /* Couleurs */
-    background-color: aliceblue;
+    background-color: rgb(254, 246, 225);
     
     /* margin - padding */
     margin: 0 auto;
@@ -26,6 +28,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 
@@ -37,47 +40,67 @@ header button{
     padding:0px
 }
 
-header img{
-    margin: 0px;
-}
-
 #logo {
-    height: 95px;
+    height: 75px;
+
     margin-left: 5vw;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 02;
+
 }
 
 h1{
     font-family: 'Helvetica';
-    color: maroon;
+    color: black;
     font-size: 40px;
 }
 
-h2{
+header h2{
     display: flex;
     justify-content: center;
     font-family: 'Helvetica';
     font-size : 30px;
-    color: maroon;
+    color: black;
 }
 
 .main_menu{
     padding-top: 10px;
-    height: 35vw;
+    height: 28vw;
     width: 60%;
     margin: auto;
     text-align: center;
     border-radius: 10px;
-    background-color: aliceblue;
+    background-color: rgb(254, 246, 225);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .icon{
     display: flex;
+    justify-content: space-evenly;
 }
 .icon img{
-    width: 80%;
+    width: 25vw;
     border-radius: 10px;
+    -webkit-filter: grayscale(100%); /* Pour les navigateurs Chrome, Safari, Opera */
+    filter: grayscale(100%); /* Firefox */
+
+    transition: all 0.5s;
 }
 
+.icon h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 3em larger;
+}
+
+.icon img:hover{
+    -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+    filter: grayscale(0%); /* Firefox */ 
+    width: 26vw;
+
+    animation-duration: 0.5s;
+    animation-name: img_hover;
+}
 
 .footer_menu {
     text-decoration : none;
@@ -97,37 +120,173 @@ a {
 
 }
 
+
+/*
+--------------------------------------------------------------------
+------------------------------ Profil ------------------------------
+--------------------------------------------------------------------
+*/
+
 .page_profil{
-    width:30vw;
-    height: 100vh;
-    background-color: red;
     position: absolute;
     right: 0px;
     top: 0px;
-    border-radius: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-around;
+    align-items: center;
+
+    width:30vw;
+    height: 100vh;
+    
+    background-color: rgb(255, 252, 238);
+    
+    border-top-left-radius: 2vh;
+    border-bottom-left-radius: 2vh;
+
+    animation-duration: 0.2s;
+    animation-name: open;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+
+  
+
+@keyframes open {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 30vw;
+    }
+}
+
+.close_menu_anim{
+    animation-duration: 0.2s;
+    animation-name: close;
+}
+
+@keyframes close{
+    from {
+        width: 30vw;
+    }
+
+    to {
+        width: 0;
+    }
+}
+
+#close_menu{
+    align-self: flex-start;
+    
+    position:absolute;
+    top: 3vh;
+
+    width: 30px;
+
+    background-color: rgb(255, 252, 238);
+
+    transition: all 0.2s;
+
+    border-radius: 30px;
+    
+    padding: 0;
+    margin-left: 2vw;
+}
+
+#close_menu img{
+    width: 30px;
+
+    border-radius: 30px;
+
+    transition: all 0.2s;
+}
+
+#close_menu:hover{
+    box-shadow: 3px 2px rgb(236, 231, 205);
+}
+
+#close_menu img:hover{
+    width: 30.5px;
 }
 
 .page_profil h1{
-    color: aqua;
     text-align: center;
     margin-bottom: 5vh;
 }
 
-.page_profil p{
-    text-align: center;
-}
-.formulaire_profil{
-    background-color: red;
-    text-align: center;
-}
 .page_profil img{
     width: 45%;
     display: flex;
-    margin:auto;
+
+    margin: 0 auto;
+    padding: 0;
+}
+
+.page_profil p{
+    text-align: center;
+    
+    font-size: 2em;
+    font-weight: bold;
+    font-family:  "Pixelify Sans", sans-serif;
+
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+}
+
+
+/*
+--------------------
+-- Fonctionalités --
+--------------------
+*/
+
+.page_profil hr{
+    width: 20vw;
+    color: gray;
+}
+
+form input{
+    margin-right: 5px;
+    margin-top: 0;
+    margin-bottom: 3vh;
 }
 
 .page_profil button{
     /*background-color: red;*/
     width: 10vw;
     border:0px;
+
+    margin-top: 3vh;
+    margin-bottom: 0;
 }
+
+.page_profil #progression{
+    display: flex;
+    flex-wrap: wrap;
+
+    align-content: center;
+    justify-content: right;
+
+    margin-top: 0;
+    margin-bottom: 8vh;
+}
+
+
+.page_profil label{
+    margin: 2vh auto 2vh auto;
+}
+
+
+.page_profil a{
+    margin: 2vh 3vw 2vh 1vw;
+}
+
+.page_profil br{
+    width: 30vw;
+    height: 0;
+}
+

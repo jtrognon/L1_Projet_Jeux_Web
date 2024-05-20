@@ -52,34 +52,41 @@ include("admin_fct.php");
 
 <body onload="body_onload();">
 
-    <h1>Page Admin</h1>
+<header>
+        <img src="../images/titre.png" alt="Logo StoryTeller" id="logo">
+        <h1>Page Admin</h1>
+        <a href="../../index.php">
+            <img src="../images/maison.png" alt="Accueil">
+        </a>
+    </header>
 
 
-    <h2>Formulaires des histoires / personnages / dialogues</h2>
-
-    <section id="forms">
-
-    <label for="choix_forms">Choix de la table à modifier : </label>
     
-    <select id="choix_forms" onchange="forms_choice()">
-        <option value="histoire">Histoire</option>
-        <option value="personnage">Personnage</option>
-        <option value="dialogue">Dialogue</option>
-    </select>
+    <section id="forms">
+        <h2>Formulaires des histoires / personnages / dialogues</h2>
+            
+        <label for="choix_forms">Choix de la table à modifier : </label>
         
-    <select id="choix_form_type" onchange="form_type_choice()">
-        <option value="all">Tout</option>
-        <option value="create">Ajouter</option>
-        <option value="update">Modifier</option>
-        <option value="delete">Supprimer</option>
-    </select>
+        <select id="choix_forms" onchange="forms_choice()">
+            <option value="nothing">--Rien--</option>
+            <option value="histoire">Histoire</option>
+            <option value="personnage">Personnage</option>
+            <option value="dialogue">Dialogue</option>
+        </select>
+            
+        <select id="choix_form_type" onchange="form_type_choice()">
+            <option value="all">Tout</option>
+            <option value="create">Ajouter</option>
+            <option value="update">Modifier</option>
+            <option value="delete">Supprimer</option>
+        </select>
 
     </section>
 
     <section id="list">
-        <h2>Liste des histoires / personnages / dialogues</h2>
+        <h2>Liste des histoires / personnages / dialogues : </h2>
     </section>
 
-    <a href="../../index.php">Menu</a>
+    
 </body>
 </html>

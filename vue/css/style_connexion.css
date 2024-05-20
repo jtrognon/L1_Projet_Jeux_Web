@@ -1,0 +1,55 @@
+.div_connexion a{
+    text-decoration: none;
+    display: flex;
+    font-size: larger;
+    color: black;
+    justify-content: center;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/fond_flou.png');
+    background-size: cover; 
+
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+.div_connexion{
+    border: solid;
+    border-color: aliceblue;
+    border-radius: 5%;
+    width: 40vw;
+    height: 38vh;
+    display: inline-block;
+    background-color: #E3F1FF;
+}
+
+.div_connexion h1{
+    text-align: center;
+}
+
+.div_connexion form{
+    text-decoration: none;
+    display: flex;
+    font-size: larger;
+    color: black;
+    justify-content: center;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2vh;
+}
+.bouton_connexion{
+    width: 100px;
+    margin: 0 auto;
+}
+#bouton_connexion{
+    width: 100px;
+    margin: 0 auto;
+}

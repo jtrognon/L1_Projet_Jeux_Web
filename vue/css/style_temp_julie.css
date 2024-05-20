@@ -6,14 +6,209 @@ body{
     display: flex;
     flex-direction: column;
     justify-content:  center;
+
+    align-content: center;
+
+    text-align: center;
+
+    background-image: url('../images/fond_flou.png');
+    background-size: cover; 
+
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+a{
+    text-decoration: none;
+}
+
+/*
+-----------
+-- Titre --
+-----------
+*/
+
+header{
+    background-color: #faf2dc;
+    border-radius: 10px;
+    width: 70vw;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+header img{
+    width: 50px;
+}
+
+#logo{
+    width: 100px;
+}
+
+
+/*
+--------------
+-- Sections --
+--------------
+*/
+
+body>section{
+    background-color: #faf2dc;
+    
+    border-radius: 10px;
+
+    margin: 10px;
+    padding-bottom: 2vh;
+}
+
+
+img{
+    padding-top: 5px;
+    width: 20px;
+}
+
+/*
+-----------------
+-- Formulaires --
+-----------------
+*/
+
+/* permet d'afficher les select côte à côte */
+#forms{
+    text-align: center;
+    flex-direction: row;
+    padding-bottom: 5vh;
+}
+
+#forms>label{
+    display: block;
+}
+
+
+#forms select{
+    align-self: center;
+}
+
+
+/* Style des formulaires */
+#forms form, #forms table{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+}
+
+#forms table{
+    background-color: #fffcf4;
+    
+    margin: 2vh 2vw;
+    padding: 2vh 2vw;
+
+    border-radius: 10px;
+}
+
+#forms td{
+    width: 250px;
+    text-align: left;
+
+}
+
+#forms td:nth-child(2){
+    width: auto;
+    margin: 0 auto;
+
+}
+
+#forms tr{
+    display: flex;
+    justify-content: space-between;
+
+    width: 500px;
+}
+
+/* permet de centrer les submit */
+#forms tr:last-child{
+    margin: 0 auto;
+    width: 62px;
+}
+
+#forms input[name="texte"]{
+    height: 100px;
+}
+
+/* 
+--------------
+-- DropDown --
+--------------
+*/
+
+/* permet d'afficher les uns sur les autres */
+#list ul{
+    display: block;
+    width: 90vw;
+
+    padding-left: 0px;
+    margin: 0 auto;
+}
+
+#list [id^=dialogue]{
+    padding-left: 5vw;
+    width: 83vw;
+}
+
+
+#list [id^=personnage]{
+    padding-left: 10vw;
+    width: 73vw;
+}
+
+#list [id^=all_personnage]{
+    padding-left: 1vw;
 }
 
 
 #list li{
-    display: flex;
-    background-color: brown;
-    width: 90vw;
-    flex-wrap: wrap;
+    background-color: #fffcf4;
 
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    justify-items: center;
+
+    width: 88vw;
+
+    padding : 3vh 1vw 2vh 1vw;
+    margin: 2vh 0 2vh;
+
+    border-radius: 10px;
 }
+
+
+#list li p{
+    display: inline;
+    max-width: 30vw;
+    max-height: 3em;
+    
+    overflow: auto;
+    scrollbar-width: 1em;
+
+    padding: 0px;
+    margin: 0px;
+
+    text-align: left;
+}
+
+/* permet de centrer */
+#list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+

@@ -12,12 +12,27 @@ include("../lib/progression/progression_lib.php");
 <html>
 	<head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style_connexion.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	<title>Connexion</title>
 	</head>
 
 	<body>
-	<h1>Page de connexion</h1>
-	<a href="connexion_vue.php" >J'ai un compte</a> </br>
-	<a href="inscription_vue.php" >Je souhaite m'inscrire</a> </br>
+	<div class = "div_connexion">
+		<h1>Bienvenue Joueur ! </h1>
+		<br><br>
+		<div>
+				<a href="connexion_vue.php">Continuer l'aventure </a> 
+		</div>
+		<br><br><br>
+		<div>
+			<a href="inscription_vue.php">Rejoindre l'aventure</a>
+		</div>
+
+
+	</div>
 	</body>
 
 </html>

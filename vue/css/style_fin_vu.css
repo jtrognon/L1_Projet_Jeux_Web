@@ -1,6 +1,42 @@
-body{
-    /*background-image: url('../images/fond.png');*/
+#body_fin{
+    background-image: url('../images/image_fond_fin.png');
     background-size: cover; 
-    background-color: red;
 }
 
+.texte_fin, .bouton_fin{
+    border: solid;
+    border-color: aliceblue;
+    border-radius: 40%;
+    background-color: #E3F1FF;
+}
+
+#texte_de_fin{
+    text-align: center;
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+    font-family: "Pixelify Sans", sans-serif;
+    font-style: normal;
+    padding: 20px;
+}
+
+#bouton_de_fin{
+    text-align: center;
+    font-size: 35px;
+    text-decoration: none;
+    color: black;
+    font-family: "Pixelify Sans", sans-serif;
+    font-style: normal;
+    padding: 20px;
+}
+
+.texte_fin{
+    position: absolute;
+    top: 27vh;
+    left: 5vw;
+}
+.bouton_fin{
+    position: absolute;
+    top: 78vh;
+    left: 40vw;
+}
