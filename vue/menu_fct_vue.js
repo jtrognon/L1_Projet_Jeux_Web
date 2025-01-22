@@ -1,5 +1,5 @@
 function wait_half_sec(){
-    return new Promise(resolve => setTimeout(resolve, 200));
+    return new Promise(resolve => setTimeout(resolve, 500));
 }
 
 
@@ -105,6 +105,11 @@ async function display_profil_menu(){
             section.appendChild(br);
         }
     })
+}
+
+
+function wait_half_sec(){
+    return new Promise(resolve => setTimeout(resolve, 500));
 }
 
 async function close_profil_menu(){

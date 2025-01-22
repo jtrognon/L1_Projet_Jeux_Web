@@ -4,12 +4,12 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-include("/home/grp1/public_html/db/db_connect.php");
-include("/home/grp1/public_html/CRUD/CRUD_progression.php");
-include("/home/grp1/public_html/CRUD/CRUD_dialogue.php");
-include("/home/grp1/public_html/CRUD/CRUD_personnage.php");
+include(__DIR__."/../../db/db_connect.php");
+include(__DIR__."/../../CRUD/CRUD_progression.php");
+include(__DIR__."/../../CRUD/CRUD_dialogue.php");
+include(__DIR__."/../../CRUD/CRUD_personnage.php");
 
-include("../fonction_histoire.php");
+include(__DIR__."/../fonction_histoire.php");
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ include("../fonction_histoire.php");
 
 
 
-    include("/home/grp1/public_html/db/db_disconnect.php");
+    include(__DIR__."/../../db/db_disconnect.php");
 
 ?>
 </body>

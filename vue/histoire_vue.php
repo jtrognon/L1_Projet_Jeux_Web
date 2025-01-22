@@ -1,11 +1,11 @@
 <?php
 session_start();
-include("../lib/global/header.php");
-include("../lib/fonction_histoire.php");
-include("/home/grp1/public_html/CRUD/CRUD_progression.php");
-include("/home/grp1/public_html/CRUD/CRUD_dialogue.php");
-include("/home/grp1/public_html/CRUD/CRUD_personnage.php");
-include("/home/grp1/public_html/CRUD/CRUD_histoire.php");
+include(__DIR__."/../lib/global/header.php");
+include(__DIR__."/../lib/fonction_histoire.php");
+include(__DIR__."/../CRUD/CRUD_progression.php");
+include(__DIR__."/../CRUD/CRUD_dialogue.php");
+include(__DIR__."/../CRUD/CRUD_personnage.php");
+include(__DIR__."/../CRUD/CRUD_histoire.php");
 ?>
 <html>
 	<head>
@@ -118,7 +118,7 @@ if (isset($_POST["1"])){
 					$dialogues = dialogue_suivant($conn,$_SESSION["id_user"],$_GET["id_histoire"]);
 					$nb_dialogue = nb_dialogue_suivant($conn, $_SESSION["id_user"],$_GET["id_histoire"]);
 					if ($nb_dialogue == 0){
-						header("Location: /~grp1/vue/fin_vue.php");
+						header("Location: /vue/fin_vue.php");
 					}
 					if ($nb_dialogue == 1){
 						$dialogue_1 = $dialogues[0];

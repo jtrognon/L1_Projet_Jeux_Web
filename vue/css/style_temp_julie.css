@@ -103,43 +103,28 @@ img{
     margin: 0 auto;
 }
 
-#forms table{
+#form table{
     background-color: #fffcf4;
     
-    margin: 2vh 2vw;
-    padding: 2vh 2vw;
+    margin: 2vh 0 2vh;
+    padding: 2vh 0 2ch;
 
     border-radius: 10px;
+
+    width: 60vw;
 }
 
 #forms td{
     width: 250px;
     text-align: left;
-
-}
-
-#forms td:nth-child(2){
-    width: auto;
-    margin: 0 auto;
-
-}
-
-#forms tr{
-    display: flex;
-    justify-content: space-between;
-
-    width: 500px;
 }
 
 /* permet de centrer les submit */
 #forms tr:last-child{
     margin: 0 auto;
-    width: 62px;
+    column-span: center;
 }
 
-#forms input[name="texte"]{
-    height: 100px;
-}
 
 /* 
 --------------

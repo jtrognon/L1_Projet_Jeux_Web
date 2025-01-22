@@ -3,7 +3,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 $debeug=True ; 
-include('../db/db_connect.php');
+include(__DIR__.'/../db/db_connect.php');
 
 /*---------------------------------------
 CRUD: Gestion de l'histoire
@@ -66,7 +66,7 @@ function mdp_connexion($conn,$login){
 
 	$res=mysqli_query($conn, $sql) ;
 	$passwd = mysqli_fetch_assoc($res);
-	if $passwd == false{
+	if ($passwd == false){
 		return null;
 	}
 	return $passwd['passwd'];
@@ -94,7 +94,7 @@ function delete_perso($conn, $id){
 }
 
 /*Modifier un personnage*/ 
-function update_perso($conn, $url_image, $nom, $couleur){
+function update_perso($conn, $url_image, $nom, $couleur, $id){
 	$sql="UPDATE `Personnage` SET `url_image`='$url_image',`nom`='$nom', `couleur`='$couleur'  WHERE id = $id" ; 
 	global $debeug ;
 	if($debeug) echo $sql ; 

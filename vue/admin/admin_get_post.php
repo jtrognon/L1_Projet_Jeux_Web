@@ -41,15 +41,6 @@ if (isset($_GET["id_personnage"])){
 
     echo "let personnage_infos = $personnage_str;";
     echo "let id_personnage = ['$id_personnage'];";
-} else if (isset($_GET["id_all_personnage"])){
-    $id_personnage = $_GET["id_all_personnage"];
-    
-    $personnage_infos = select_perso($conn, $id_personnage)[0];
-    $personnage_list = dict_to_list($personnage_infos);
-    $personnage_str = json_encode($personnage_list);
-
-    echo "let personnage_infos = $personnage_str;";
-    echo "let id_personnage = ['$id_personnage'];";
 } else {
     echo "let personnage_infos = ['', '', '', ''];";
     echo "let id_personnage = [''];";

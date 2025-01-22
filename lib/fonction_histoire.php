@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 // include('../db/db_connect.php');
-include('progression/progression_lib.php');
+include(__DIR__.'/progression/progression_lib.php');
 
 $debeug=False ; 
 

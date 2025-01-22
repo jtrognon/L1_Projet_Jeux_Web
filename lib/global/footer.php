@@ -1,3 +1,3 @@
 <?php
-include("db/db_disconnect.php");
+include(__DIR__."/db/db_disconnect.php");
 ?>

@@ -4,9 +4,9 @@ session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-include("/home/grp1/public_html/db/db_connect.php");
-include("/home/grp1/public_html/CRUD/CRUD_connexion.php");
-include("/home/grp1/public_html/lib/global/global_fct_lib.php");
+include(__DIR__."/../../db/db_connect.php");
+include(__DIR__."/../../CRUD/CRUD_connexion.php");
+include(__DIR__."/../../lib/global/global_fct_lib.php");
 
 if (!isset($redirection)){
     $redirection = true;

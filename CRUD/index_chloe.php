@@ -2,9 +2,9 @@
 <?php
     error_reporting(E_ALL);
     ini_set('display_errors', '1');
-    include('../db/db_connect.php');
-    include('../lib/fonction_histoire.php');
-    include('../CRUD/CRUD_dialogue.php');
+    include(__DIR__.'/../db/db_connect.php');
+    include(__DIR__.'/../lib/fonction_histoire.php');
+    include(__DIR__.'/../CRUD/CRUD_dialogue.php');
 ?>
 
 

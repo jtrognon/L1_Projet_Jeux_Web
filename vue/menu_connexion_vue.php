@@ -1,11 +1,11 @@
 <?php
 $redirection = false;
 session_start();
-include("../lib/global/header.php");
-include("/home/grp1/public_html/CRUD/CRUD_progression.php");
-include("/home/grp1/public_html/CRUD/CRUD_dialogue.php");
-include("/home/grp1/public_html/CRUD/CRUD_histoire.php");
-include("../lib/progression/progression_lib.php");
+include(__DIR__."/../lib/global/header.php");
+include(__DIR__."/../CRUD/CRUD_progression.php");
+include(__DIR__."/../CRUD/CRUD_dialogue.php");
+include(__DIR__."/../CRUD/CRUD_histoire.php");
+include(__DIR__."/../lib/progression/progression_lib.php");
 
 
 ?>

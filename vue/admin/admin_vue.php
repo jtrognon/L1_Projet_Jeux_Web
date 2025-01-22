@@ -1,17 +1,17 @@
 <?php
 session_start();
-include("../../lib/global/header_admin.php");
+include(__DIR__."/../../lib/global/header_admin.php");
 
 ?>
 
 <?php
-include("/home/grp1/public_html/db/db_connect.php");
-include("/home/grp1/public_html/CRUD/CRUD_histoire.php");
-include("/home/grp1/public_html/CRUD/CRUD_dialogue.php");
-include("/home/grp1/public_html/CRUD/CRUD_personnage.php");
-include("/home/grp1/public_html/CRUD/CRUD_progression.php");
+include(__DIR__."/../../db/db_connect.php");
+include(__DIR__."/../../CRUD/CRUD_histoire.php");
+include(__DIR__."/../../CRUD/CRUD_dialogue.php");
+include(__DIR__."/../../CRUD/CRUD_personnage.php");
+include(__DIR__."/../../CRUD/CRUD_progression.php");
 
-include("admin_fct.php");
+include(__DIR__."/admin_fct.php");
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +27,7 @@ include("admin_fct.php");
 <script>
 
 <?php
-    include("admin_get_post.php");
+    include(__DIR__."/admin_get_post.php");
     load_histoires($conn);
 
     load_personnage_list($conn);

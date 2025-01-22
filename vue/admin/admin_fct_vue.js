@@ -375,7 +375,7 @@ function create_expand_button(id, type, id_histoire){
     button.appendChild(img);
     
     button.button_type = type;
-    button.button_id = id; 
+    button.button_id = id;
     button.button_id_histoire = id_histoire;
     
     

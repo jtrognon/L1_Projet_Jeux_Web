@@ -1,11 +1,11 @@
 <?php
     error_reporting(E_ALL);
     ini_set('display_errors', '1');
-    include("lib/global/header.php");
-    include("lib/progression/progression_lib.php");
-    include("CRUD/CRUD_histoire.php");
-    include("CRUD/CRUD_progression.php");
-    include("CRUD/CRUD_dialogue.php");
+    include(__DIR__."/lib/global/header.php");
+    include(__DIR__."/lib/progression/progression_lib.php");
+    include(__DIR__."/CRUD/CRUD_histoire.php");
+    include(__DIR__."/CRUD/CRUD_progression.php");
+    include(__DIR__."/CRUD/CRUD_dialogue.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -76,7 +76,7 @@
 
         <button onclick="display_profil_menu()" id="profil"><img src="vue/images/icon.png" alt="Profil"></button>
     </header>
-   <br><br>
+   
     <br>
 
     <main class="main_menu">

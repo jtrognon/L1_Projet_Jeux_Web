@@ -1,7 +1,7 @@
 <?php
 $redirection = false;
 session_start();
-include("../lib/global/header.php");
+include(__DIR__."/../lib/global/header.php");
 
 
 ?>

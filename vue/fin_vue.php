@@ -1,7 +1,7 @@
 <?php
 session_start();
-include("../db/db_connect.php");
-include("../lib/global/header.php");
+include(__DIR__."/../db/db_connect.php");
+include(__DIR__."/../lib/global/header.php");
 
 if(isset($_POST["login"])){
 	$mdp = mdp_connexion($conn, $_POST["login"]); // select_mdp à faire
@@ -13,7 +13,7 @@ if(isset($_POST["login"])){
 		$admi = admin_connexion($conn,$_POST["login"]);
 		$_SESSION["id_user"] = $id;
 		$_SESSION["admin"] = $admi ;
-		header("Location: /~grp1/index.php"); 
+		header("Location: /index.php"); 
 	}
 }
 ?>

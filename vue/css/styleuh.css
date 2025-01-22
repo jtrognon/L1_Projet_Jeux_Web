@@ -4,7 +4,6 @@ body{
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center; 
-    
 
 }
 
@@ -15,7 +14,7 @@ header{
     
     
     /* Couleurs */
-    background-color: rgb(254, 246, 225);
+    background-color: aliceblue;
     
     /* margin - padding */
     margin: 0 auto;
@@ -28,7 +27,6 @@ header{
     display: flex;
     justify-content: space-between;
     align-content: space-between;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 
@@ -40,14 +38,13 @@ header button{
     padding:0px
 }
 
+header img{
+    margin: 0px;
+}
+
 #logo {
-    height: 75px;
-
+    height: 115px;
     margin-left: 5vw;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 02;
-
 }
 
 h1{
@@ -66,41 +63,22 @@ header h2{
 
 .main_menu{
     padding-top: 10px;
-    height: 28vw;
+    height: 35vw;
     width: 60%;
     margin: auto;
     text-align: center;
     border-radius: 10px;
-    background-color: rgb(254, 246, 225);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: aliceblue;
 }
 
 .icon{
     display: flex;
-    justify-content: space-evenly;
 }
 .icon img{
-    width: 25vw;
+    width: 80%;
     border-radius: 10px;
-    -webkit-filter: grayscale(100%); /* Pour les navigateurs Chrome, Safari, Opera */
-    filter: grayscale(100%); /* Firefox */
-
-    transition: all 0.5s;
 }
-
-.icon h2{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 3em larger;
-}
-
-.icon img:hover{
-    -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
-    filter: grayscale(0%); /* Firefox */ 
-    width: 26vw;
-
-    animation-duration: 0.5s;
-    animation-name: img_hover;
-}
+jul
 
 .footer_menu {
     text-decoration : none;
@@ -141,18 +119,14 @@ a {
     width:30vw;
     height: 100vh;
     
-    background-color: rgb(255, 252, 238);
+    background-color: #f5ecb8;
     
     border-top-left-radius: 2vh;
     border-bottom-left-radius: 2vh;
 
-    animation-duration: 0.2s;
+    animation-duration: 0.5s;
     animation-name: open;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
-
-
-  
 
 @keyframes open {
     from {
@@ -165,7 +139,7 @@ a {
 }
 
 .close_menu_anim{
-    animation-duration: 0.2s;
+    animation-duration: 0.5s;
     animation-name: close;
 }
 
@@ -183,34 +157,11 @@ a {
     align-self: flex-start;
     
     position:absolute;
-    top: 3vh;
-
-    width: 30px;
-
-    background-color: rgb(255, 252, 238);
-
-    transition: all 0.2s;
-
-    border-radius: 30px;
+    top: 2vh;
     
-    padding: 0;
-    margin-left: 2vw;
-}
+    width: 100px;
 
-#close_menu img{
-    width: 30px;
-
-    border-radius: 30px;
-
-    transition: all 0.2s;
-}
-
-#close_menu:hover{
-    box-shadow: 3px 2px rgb(236, 231, 205);
-}
-
-#close_menu img:hover{
-    width: 30.5px;
+    background-color: #f5ecb8;
 }
 
 .page_profil h1{
@@ -289,4 +240,3 @@ form input{
     width: 30vw;
     height: 0;
 }
-
