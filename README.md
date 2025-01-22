@@ -2,13 +2,13 @@
 ## Once upon a time
 
 ### Le jeu
-Il s'agit d'un projet de création d'un jeu web réalisé par quatres étudiants en L1 Info à L'USMB (2023-2024).
+Il s'agit d'un projet de création d'un jeu web réalisé par quatre étudiants en L1 Info à L'USMB (2023-2024).
 
 ### Pitch :
 
-Ce site permet de jouer à plusieurs histoires. Celles-ci seront guidées par le choix d’actions et de dialogues. Chaque choix et dialogues sont eux-même la conséquences de plusieurs choix fait précédemment. Un système de lancé de dés (chance de réalisation) permettera de décider des résultats d’une action. Il y aura également un système de sauvegarde permettant au joueur de reprendre à son dernier dialogue. Et ainsi, un système de connexion.
+Ce site permet de jouer à plusieurs histoires. Celles-ci seront guidées par le choix d’actions et de dialogues. Chaque choix et dialogue sont eux-mêmes la conséquence de plusieurs choix faits précédemment. Un système de lancé de dés (chance de réalisation) permettra de décider des résultats d’une action. Il y aura également un système de sauvegarde permettant au joueur de reprendre à son dernier dialogue. Et ainsi, un système de connexion.
 
-Une page admin permettera de gérer les histoires et leurs contenus. En effet, cette page comprendra l’ajout, la modification, la suppression et la visualisation des histoires et leurs contenus.
+Une page admin permettera de gérer les histoires et de leurs contenus. En effet, cette page comprendra l’ajout, la modification, la suppression et la visualisation des histoires et leurs contenus.
 
 ### Visuel :
 
