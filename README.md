@@ -6,6 +6,12 @@ Il s'agit d'un projet de création d'un jeu web réalisé par quatre étudiants 
 
 ### Pitch :
 
+![Choix_Histoire](README_Assets/choix_histoire.png)
+![Dé_Aléatoire](README_Assets/dé_aléatoire.png)
+![Exemple_Histoire](README_Assets/exemple_histoire.png)
+![Page_Accueil](README_Assets/page_accueil.png)
+![Profil_Histoire](README_Assets/profil_histoire.png)
+
 Ce site permet de jouer à plusieurs histoires. Celles-ci seront guidées par le choix d’actions et de dialogues. Chaque choix et dialogue sont eux-mêmes la conséquence de plusieurs choix faits précédemment. Un système de lancé de dés (chance de réalisation) permettra de décider des résultats d’une action. Il y aura également un système de sauvegarde permettant au joueur de reprendre à son dernier dialogue. Et ainsi, un système de connexion.
 
 Une page admin permettra de gérer les histoires et leurs contenus. En effet, cette page comprendra l’ajout, la modification, la suppression et la visualisation des histoires et de leurs contenus.
