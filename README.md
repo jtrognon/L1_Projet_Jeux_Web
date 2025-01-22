@@ -6,24 +6,38 @@ Il s'agit d'un projet de création d'un jeu web réalisé par quatre étudiants 
 
 ### Pitch :
 
-![Choix_Histoire](README_Assets/choix_histoire.png)
-![Dé_Aléatoire](README_Assets/dé_aléatoire.png)
-![Exemple_Histoire](README_Assets/exemple_histoire.png)
+Plongez dans un monde d’histoires interactives où chaque choix compte. Le joueur est guidé à travers des récits captivants, ponctués par des décisions stratégiques et des dialogues immersifs. Chaque décision est influencée par les choix précédents, rendant chaque partie unique.
+
+Pour pimenter l’aventure, un système de lancer de dés détermine les chances de succès de certaine actions entreprises. Le jeu inclut également :
+
+Un système de sauvegarde pour reprendre l’histoire là où elle s'est arrêtée.
+Une connexion sécurisée pour chaque utilisateur, avec la possibilité de s'inscrire.
+
+### Comment jouer
+
+Commencez par vous créer un compte et connectez vous ensuite.
+
 ![Page_Accueil](README_Assets/page_accueil.png)
+
+Sélectionnez l’histoire que vous souhaitez explorer parmi la liste des histoires disponibles.
+
+![Choix_Histoire](README_Assets/choix_histoire.png)
+
+Accedez au profil pour changer votre mot de passe et visualiser votre progression sur les histoires. Vous pouvez aussi réinitialiser une histoire pour la recommencer et opter pour des choix différents !
+
 ![Profil_Histoire](README_Assets/profil_histoire.png)
 
-Ce site permet de jouer à plusieurs histoires. Celles-ci seront guidées par le choix d’actions et de dialogues. Chaque choix et dialogue sont eux-mêmes la conséquence de plusieurs choix faits précédemment. Un système de lancé de dés (chance de réalisation) permettra de décider des résultats d’une action. Il y aura également un système de sauvegarde permettant au joueur de reprendre à son dernier dialogue. Et ainsi, un système de connexion.
+Immergez-vous dans une narration interactive où vos décisions façonnent la suite des événements.
 
-Une page admin permettra de gérer les histoires et leurs contenus. En effet, cette page comprendra l’ajout, la modification, la suppression et la visualisation des histoires et de leurs contenus.
+![Exemple_Histoire](README_Assets/exemple_histoire.png)
 
-### Visuel :
+Mais attention un lancé de dé sera parfois maitre de vos actions !
 
-Quant à l’affichage de la page : 
-- Page principale (index) : Menu avec le choix des histoires et le lien vers la page admin.
-- Page de connexion : Redirection sur cette page si l’utilisateur n’est pas connecté. Permet également de s’inscrire.
-- Page d’histoire (quand une histoire est sélectionnée) : Une barre de navigation contenant le titre de l’histoire, un lien pour accéder au profil de l’utilisateur, un lien pour la sauvegarde et le retour au menu.
+![Dé_Aléatoire](README_Assets/dé_aléatoire.png)
 
-Le contenu principal de la page sera l’histoire en elle-même, avec les choix à faire et les trois dialogues précédents.
+### Session administrateur
+
+Il existe une session administrateur qui permet de gérer les histoires. A partir de celle-ci il est possible de créer, supprimer, de modifier ou encore de visualiser visualiser des récits et leurs contenus.
 
 ## Crédits
 
